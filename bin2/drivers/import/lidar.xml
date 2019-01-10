@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportDefinitions>
+
+  <ImportDefinition name="LiDAR" description="">
+    <SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+      <TagString>{root}\{any-folders}\{{scene}.las:reverse}</TagString>
+    </SceneSearch>
+    <SceneDefinition geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+      <ImageLayer alias="" driver="LAS_LIDAR_BIN">
+        <TagString>{root}\{any-folders}\{{scene}.las:reverse}</TagString>
+      </ImageLayer>
+    </SceneDefinition>
+  </ImportDefinition>
+
+</ImportDefinitions>

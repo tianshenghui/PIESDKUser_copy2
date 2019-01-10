@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportDefinitions>
+	<ImportDefinition name="MX8 - Central Camera View - AVI" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{scene}">
+			<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={any}.avi&amp;angle=0&amp;num={num}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Layer0{layer-number}" driver="AVI">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="2" alias="Layer0{layer-number}" driver="AVI">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="3" alias="Layer0{layer-number}" driver="AVI">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={any}_poly.shp&amp;angle=0&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={any}_poly.dbf&amp;angle=0&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+
+	<ImportDefinition name="MX8 - Central Camera View - AVI+LAS All" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{scene}">
+			<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.{layer2}&amp;num={layer3}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Layer0{alias-number}" driver="AVI">
+				<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.avi&amp;angle=0&amp;num={any2}:reverse}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="2" alias="Layer0{alias-number}" driver="AVI">
+				<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.avi&amp;angle=0&amp;num={any2}:reverse}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="3" alias="Layer0{alias-number}" driver="AVI">
+				<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.avi&amp;angle=0&amp;num={any2}:reverse}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="1" alias="Laser0{alias-number}" driver="DRIVER_LXT">
+				<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.0.lxt&amp;angle=0&amp;num={num}:reverse}</TagString>
+        <TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.lxt&amp;angle=0&amp;num={num}:reverse}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.shp&amp;angle=0&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.dbf&amp;angle=0&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.shp&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.dbf&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+	<ImportDefinition name="MX8 - Central Camera View - AVI+LAS Single" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{run}_Laser0{num}">
+			<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{scene}_{run}:reverse}.0.lxt&amp;angle=0&amp;num={num}</TagString>
+      <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{scene}_{run}:reverse}.lxt&amp;angle=0&amp;num={num}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Layer01" driver="AVI">
+			    <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{any2}_{run}:reverse}.avi&amp;angle=0&amp;num={any3}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="2" alias="Layer02" driver="AVI">
+				<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{any2}_{run}:reverse}.avi&amp;angle=0&amp;num={any3}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="3" alias="Layer03" driver="AVI">
+				<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{any2}_{run}:reverse}.avi&amp;angle=0&amp;num={any3}</TagString>
+			</ImageLayer>
+			<ImageLayer channel="1" alias="Laser01" driver="DRIVER_LXT">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{any2}_{run}_poly:reverse}.shp&amp;angle=0&amp;num={any3}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{any2}_{run}_poly:reverse}.dbf&amp;angle=0&amp;num={any3}</TagString>
+				</Attribute>
+			</ThematicLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{scene}_{run}_poly:reverse}.shp&amp;num={any3}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={run}&amp;relpath={{scene}_{run}_poly:reverse}.dbf&amp;num={any3}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+	
+	<ImportDefinition name="MX8 - Top Down - LAS All" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{scene}">
+			<TagString>{{root}\{any-folders}\{any}.RUN?{run={scene}&amp;relpath={layer}.las}&amp;num={layer2}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Laser0{layer-number}" driver="LAS20">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.shp&amp;num={layer2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.dbf&amp;num={layer2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+	<ImportDefinition name="MX8 - Top Down - LAS Single" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{run}_Laser0{num}">
+			<TagString>{{root}\{any-folders}\{any}.RUN?{run={run}&amp;relpath={scene}.las}&amp;num={num}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Laser01" driver="LAS20">
+				<TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace01" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}_poly.shp&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}_poly.dbf&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+
+	<ImportDefinition name="MX8 - Central Camera View - LAS All" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{scene}">
+      <TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.0.lxt&amp;angle=0&amp;num={layer2}:reverse}</TagString>
+      <TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}.lxt&amp;angle=0&amp;num={layer2}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Laser0{layer-number}" driver="DRIVER_LXT">
+        <TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.shp&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={scene}&amp;relpath={layer}_poly.dbf&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+	<ImportDefinition name="MX8 - Central Camera View - LAS Single" description="">
+		<SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" scene-name="{run}_Laser0{num}">
+      <TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}.0.lxt&amp;angle=0&amp;num={num}:reverse}</TagString>
+      <TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}.lxt&amp;angle=0&amp;num={num}:reverse}</TagString>
+		</SceneSearch>
+		<SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+			<ImageLayer channel="1" alias="Laser01" driver="DRIVER_LXT">
+        <TagString>{search-string}</TagString>
+			</ImageLayer>
+			<ThematicLayer alias="Trace01" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+				<Geometry driver="SHAPE">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}_poly.shp&amp;num={any2}:reverse}</TagString>
+				</Geometry>
+				<Attribute driver="DBase">
+					<TagString>{{root}\{any-folders}\{any}.RUN?run={run}&amp;relpath={scene}_poly.dbf&amp;num={any2}:reverse}</TagString>
+				</Attribute>
+			</ThematicLayer>
+		</SceneDefinition>
+	</ImportDefinition>
+
+
+  <ImportDefinition name="MX8 - All Camera View - AVI All" description="">
+    <SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" map-name="map{map}" scene-name="{scene}">
+      <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}:reverse}.avi&amp;angle={map}&amp;num={layer2}</TagString>
+    </SceneSearch>
+    <SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+      <ImageLayer channel="1" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{search-string}</TagString>
+      </ImageLayer>
+      <ImageLayer channel="2" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{search-string}</TagString>
+      </ImageLayer>
+      <ImageLayer channel="3" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{search-string}</TagString>
+      </ImageLayer>
+      <ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+        <Geometry driver="SHAPE">
+          <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}:reverse}_poly.shp&amp;angle={map}&amp;num={any2}</TagString>
+        </Geometry>
+        <Attribute driver="DBase">
+          <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}:reverse}_poly.dbf&amp;angle={map}&amp;num={any2}</TagString>
+        </Attribute>
+      </ThematicLayer>
+    </SceneDefinition>
+  </ImportDefinition>
+  <ImportDefinition name="MX8 - All Camera View - AVI+LAS All" description="">
+    <SceneSearch folders-from-file-system="yes" bdi-driver="TRI_RUN" map-name="map{map}" scene-name="{scene}">
+      <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}.{layer2}:reverse}&amp;angle={map}&amp;num={layer3}</TagString>
+    </SceneSearch>
+    <SceneDefinition force-fitting="0" geo-coding="from-file" scene-extent="union" scene-unit="auto" pixel-size="auto">
+      <ImageLayer channel="1" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}.avi:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+      </ImageLayer>
+      <ImageLayer channel="2" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}.avi:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+      </ImageLayer>
+      <ImageLayer channel="3" alias="Layer0{alias-number}" driver="AVI">
+        <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}.avi:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+      </ImageLayer>
+      <ImageLayer channel="1" alias="Laser0{alias-number}" driver="DRIVER_LXT">
+        <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}.lxt:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+      </ImageLayer>
+      <ThematicLayer alias="Trace0{layer-number}" attribute-id-column="" raster-line-width="1" raster-point-size="1" raster-diagonal-neighbourhood="no">
+        <Geometry driver="SHAPE">
+          <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}_poly.shp:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+        </Geometry>
+        <Attribute driver="DBase">
+          <TagString>{{root}\{any-folders}\{any}.RUN:reverse}?run={scene}&amp;relpath={{layer}_poly.dbf:reverse}&amp;angle={map}&amp;num={any2}</TagString>
+        </Attribute>
+      </ThematicLayer>
+    </SceneDefinition>
+  </ImportDefinition>
+  
+</ImportDefinitions>

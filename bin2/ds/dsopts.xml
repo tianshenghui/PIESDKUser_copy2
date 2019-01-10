@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSourceExtras>
+
+	<DataSourceOptions driver="LAS_LIDAR_BIN" template="html/lidar.html">
+	</DataSourceOptions>
+
+	<DataSourceOptions driver="LAS20" template="html/lidar.html">
+	</DataSourceOptions>
+
+</DataSourceExtras>

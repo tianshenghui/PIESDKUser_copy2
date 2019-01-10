@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7C50F59-9C4A-4534-8D96-7316B1059EC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PIESDKUser</RootNamespace>
+    <AssemblyName>PIESDKUser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\PIE2.1\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\bin2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>AppDebug\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>AppDebug\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>PIESDKUser.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F991D24068F1CF288C2195AC2960F1E5C2A6549</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PIESDKUser_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AnalyseImageCshap, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Trimble\eCognition Developer 64 9.0\bin\AnalyseImageCshap.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\DevExpress.Data.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\DevExpress.Utils.v14.2.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.AdapterUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.AdapterUI.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.AdapterUICLR, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.AdapterUICLR.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Carto, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Carto.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.CommonAlgo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.CommonAlgo.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.ControlsEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.ControlsEx.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.ControlsUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.ControlsUI.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.DataSource, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.DataSource.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Display, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Display.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Geometry, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Geometry.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.BatchDealTools, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.BatchDealTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.CloudFlash, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.CloudFlash.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.ImagePreProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.ImagePreProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.ImageTransform, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.ImageTransform.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.MonitorAnalysis, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.MonitorAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Plugin.UtilityTools, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Plugin.UtilityTools.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.SystemAlgo, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.SystemAlgo.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.SystemUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.SystemUI.dll</HintPath>
+    </Reference>
+    <Reference Include="PIE.Utility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=ee1bc88606bd5383, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\jsj\Downloads\PIE SDK For Donet_64\Bin\PIE.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ImageSeg_Form\ClassSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageSeg_Form\ClassSetting.Designer.cs">
+      <DependentUpon>ClassSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSeg\ExecuteEC.cs" />
+    <Compile Include="FTP\FTPdownload.cs" />
+    <Compile Include="PIE\FullExtent.cs" />
+    <Compile Include="PIE_Form\ISODATA_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIE_Form\ISODATA_FRM.Designer.cs">
+      <DependentUpon>ISODATA_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PIE\ISODATA.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PIE\Neural.cs" />
+    <Compile Include="PIE_Form\Neural_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIE_Form\Neural_FRM.Designer.cs">
+      <DependentUpon>Neural_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PIE\PCAfusion.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PIE\KMeans.cs" />
+    <Compile Include="PIE_Form\PCAfusion_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIE_Form\PCAfusion_FRM.Designer.cs">
+      <DependentUpon>PCAfusion_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSeg\RuleSetMessage.cs" />
+    <Compile Include="ScreenSplash.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScreenSplash.Designer.cs">
+      <DependentUpon>ScreenSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSeg_Form\SegClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageSeg_Form\SegClassForm.Designer.cs">
+      <DependentUpon>SegClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSeg\SegLib.cs" />
+    <Compile Include="ImageSeg_Form\SegSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageSeg_Form\SegSetting.Designer.cs">
+      <DependentUpon>SegSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageSeg\XmlInfo.cs" />
+    <Compile Include="PIE\ZoomIn.cs" />
+    <EmbeddedResource Include="ImageSeg_Form\ClassSetting.resx">
+      <DependentUpon>ClassSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIE_Form\ISODATA_FRM.resx">
+      <DependentUpon>ISODATA_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PIE_Form\Neural_FRM.resx">
+      <DependentUpon>Neural_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PIE_Form\PCAfusion_FRM.resx">
+      <DependentUpon>PCAfusion_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageSeg_Form\SegClassForm.resx">
+      <DependentUpon>SegClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageSeg_Form\SegSetting.resx">
+      <DependentUpon>SegSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="PIESDKUser.ruleset" />
+    <None Include="PIESDKUser_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MapFull.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZoomIn.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CartoGraphy_ZoomIn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waiting.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplashScreen.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

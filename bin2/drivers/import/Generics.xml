@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportDefinitions>
+
+<!-- Do not change the name of this connector, there are dependencies on it -->
+<ImportDefinition name="Generic - one file per scene" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="no" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Generic - one file per scene - with resolution" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="yes" scene-extent="union" scene-unit="auto" pixel-size="auto">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Generic - one scene per folder" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+	<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="no" scene-extent="union">
+	<ImageLayer>
+		<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+		<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Generic - one scene per folder with ini metadata file" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+	<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="no" scene-extent="union">
+	<ImageLayer>
+		<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+		<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+</ImportDefinitions>

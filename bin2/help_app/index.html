@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>帮助</title>
+    <link rel="stylesheet" href="style/reset.css"/>
+    <link rel="stylesheet" href="style/index.css"/>
+</head>
+<script src="style/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="style/content_right.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#right-content").html("<h1>欢迎使用软件说明！</h1>");
+        transformIcon($("#menu2"),$(".direc0"), $(".nav2-2"));
+        transformIcon($("#menu3"),$(".direc1"), $(".nav3"));
+        transformIcon($("#un-classify"),$(".direc2"), $(".nav4"));
+
+        $("li").click(function () {
+            var eleId = $(this).attr('id');
+            for(var key in txtJson){
+                if (eleId == key)
+                {
+
+                    $("#right-content").html(" ");
+                    var obj = document.getElementById("right-content");
+                    addText(eleId,obj);
+                }
+            }
+        });
+    });
+</script>
+<body>
+<div id="container">
+    <div id="left-nav">
+        <div id="title">&nbsp;&nbsp;帮助</div>
+        <div id="nav">
+            <ul class="first-nav">
+                <li id="intro">软件总体介绍</li>
+                <li><p id="menu2">软件各模块使用说明<img class="direc0" src="style/right.png"/></p>
+                    <div class="nav2-2">
+                        <ul class="sec-nav">
+                            <li id="load">程序的数据载入功能</li>
+                            <li id="listWindow">图层列表窗口中的相关功能</li>
+                            <li id="process"><p id="menu3">程序的数据处理功能<img class="direc1" src="style/right.png"/></p>
+                                <div class="nav3">
+                                    <ul class="third-nav">
+                                        <li id="merge">影像融合</li>
+                                        <li><p id="un-classify">影像的非监督分类<img class="direc2" src="style/right.png"/></p>
+                                            <div class="nav4">
+                                                <ul class="forth-nav">
+                                                    <li id="kMeans">K-Means分类</li>
+                                                    <li id="isodata">ISODATA分类</li>
+                                                    <li id="neural">神经网络聚类</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li id="objectClassify">面向对象分类</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li id="notice">程序注意事项</li>
+            </ul>
+        </div>
+    </div>
+    <div id="right-content">
+    </div>
+</div>
+</body>
+</html>

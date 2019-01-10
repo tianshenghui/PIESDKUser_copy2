@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImportDefinitions>
+
+
+<ImportDefinition name="Geo-coded - one file per scene" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{{scene}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Geo-coded - one scene per folder" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+	<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer>
+		<TagString desc="for root folder">{{root}\{scene}\{layer}.{any}:reverse}</TagString>
+		<TagString desc="for sub-folders">{root}{\{any-folders}\{scene}\{layer}.{any}:reverse}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Erdas Imagine Images" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.img</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="" driver="GDAL">
+		<TagString>{root}\{any-folders}\{scene}.img</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Arc/Info Binary Grid" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.{any}</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="" driver="GDAL">
+		<TagString>{root}\{any-folders}\{scene}.{any}</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="National Imagery Transmission (NITF)" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.ntf</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="" driver="GDAL">
+		<TagString>{root}\{any-folders}\{scene}.ntf</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Envisat ASAR Files" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.N1</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.N1</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="ESRI ASCII GRID Files" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.asc</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.asc</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="PCO SensiCam Files" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.b16</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.b16</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="PCIDSK" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.pix</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.pix</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Arc/Info BIL" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.bil</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.bil</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Intergraph Raster" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.ers</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.ers</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="NCSA Hierarchical Data Format" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.hdf</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.hdf</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Geosoft Grid File 2.0" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.ggf</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.ggf</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="GeoSoft Grid Exchange Format" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.gxf</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.gxf</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Idrisi Raster" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.idr</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.idr</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Gould LIPS" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.lip</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.lip</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="NITF 2.0" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.nit</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.nit</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="SPANS Raster" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.rnh</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.rnh</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+<ImportDefinition name="Erdas LAN" description="">
+<SceneSearch folders-from-file-system="yes" scene-name="{scene}">
+	<TagString>{root}\{any-folders}\{scene}.lan</TagString>
+</SceneSearch>
+<SceneDefinition geo-coding="from-file" scene-extent="union">
+	<ImageLayer alias="">
+		<TagString>{root}\{any-folders}\{scene}.lan</TagString>
+	</ImageLayer>
+</SceneDefinition>
+</ImportDefinition>
+
+</ImportDefinitions>
