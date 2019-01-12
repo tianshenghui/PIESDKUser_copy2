@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class Form_KMeans
     {
@@ -57,7 +57,7 @@
             // lb_inputFile
             // 
             this.lb_inputFile.AutoSize = true;
-            this.lb_inputFile.Location = new System.Drawing.Point(23, 27);
+            this.lb_inputFile.Location = new System.Drawing.Point(23, 26);
             this.lb_inputFile.Name = "lb_inputFile";
             this.lb_inputFile.Size = new System.Drawing.Size(67, 15);
             this.lb_inputFile.TabIndex = 0;
@@ -67,6 +67,7 @@
             // 
             this.tb_InputFile.Location = new System.Drawing.Point(122, 22);
             this.tb_InputFile.Name = "tb_InputFile";
+            this.tb_InputFile.ReadOnly = true;
             this.tb_InputFile.Size = new System.Drawing.Size(339, 25);
             this.tb_InputFile.TabIndex = 1;
             // 
@@ -217,6 +218,7 @@
             // 
             this.tb_outFile.Location = new System.Drawing.Point(122, 429);
             this.tb_outFile.Name = "tb_outFile";
+            this.tb_outFile.ReadOnly = true;
             this.tb_outFile.Size = new System.Drawing.Size(339, 25);
             this.tb_outFile.TabIndex = 6;
             // 

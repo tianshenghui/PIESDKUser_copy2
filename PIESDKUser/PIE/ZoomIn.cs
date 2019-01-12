@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     /// <summary>
     /// 拉框放大

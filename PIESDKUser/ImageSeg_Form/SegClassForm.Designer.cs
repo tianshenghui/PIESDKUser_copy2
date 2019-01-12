@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class SegClassForm
     {
@@ -89,7 +89,7 @@
             // 
             // bn_Execute
             // 
-            this.bn_Execute.Location = new System.Drawing.Point(284, 557);
+            this.bn_Execute.Location = new System.Drawing.Point(296, 563);
             this.bn_Execute.Name = "bn_Execute";
             this.bn_Execute.Size = new System.Drawing.Size(104, 37);
             this.bn_Execute.TabIndex = 1;
@@ -206,14 +206,14 @@
             // Lb_result
             // 
             this.Lb_result.AutoSize = true;
-            this.Lb_result.Location = new System.Drawing.Point(89, 567);
+            this.Lb_result.Location = new System.Drawing.Point(89, 572);
             this.Lb_result.Name = "Lb_result";
             this.Lb_result.Size = new System.Drawing.Size(0, 15);
             this.Lb_result.TabIndex = 11;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(418, 559);
+            this.progressBar1.Location = new System.Drawing.Point(418, 564);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(260, 35);
             this.progressBar1.TabIndex = 12;

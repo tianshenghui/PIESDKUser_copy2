@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class Neural_FRM
     {
@@ -75,6 +75,7 @@
             this.textBox1.Location = new System.Drawing.Point(132, 24);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(411, 25);
             this.textBox1.TabIndex = 1;
             // 

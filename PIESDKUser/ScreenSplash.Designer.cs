@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class ScreenSplash
     {

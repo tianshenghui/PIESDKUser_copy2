@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     /// <summary>
     /// 全图显示

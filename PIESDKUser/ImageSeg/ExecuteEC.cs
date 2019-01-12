@@ -10,7 +10,7 @@ using PIE.Controls;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     public class ExecuteEC:BaseCommand
     {

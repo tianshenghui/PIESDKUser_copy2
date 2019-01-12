@@ -7,8 +7,8 @@
     <ProjectGuid>{D7C50F59-9C4A-4534-8D96-7316B1059EC2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PIESDKUser</RootNamespace>
-    <AssemblyName>PIESDKUser</AssemblyName>
+    <RootNamespace>Sparkle</RootNamespace>
+    <AssemblyName>Sparkle</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -54,7 +54,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\..\bin3\</OutputPath>
+    <OutputPath>..\..\bin4\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -111,6 +111,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dog.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AnalyseImageCshap, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
@@ -386,6 +389,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SplashScreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dog.ico" />
+    <Content Include="TextTemplate.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Text.RegularExpressions;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class SegSetting: Form
     {        
@@ -53,7 +53,8 @@ namespace PIESDKUser
                 string OutPathInfo = xml_doc.SearchAlgoParams();
                 string changedOutPath = ChangeOutPath(ref OutPathInfo, outpath);
                 xml_doc.ChangeoutPath(changedOutPath);
-                RuleSetMessage.AlgoOptions = 0;
+                RuleSetMessage.AlgoOptions = 1;
+                RuleSetMessage.OutShpPath = tb_outpath.Text;
             }
             else
             {

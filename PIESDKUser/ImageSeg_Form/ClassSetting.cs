@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class ClassSettingForm : Form
     {
@@ -123,7 +123,7 @@ namespace PIESDKUser
                 tb_outputPath.Text = ParseOutPathRe(outPath);
                 string changedOutPath = ChangeOutPath(ref outPath, RuleSetMessage.OutClassResultsPath);
                 classDet.ChangeoutPath2(changedOutPath);
-                RuleSetMessage.AlgoOptions = 1;
+                RuleSetMessage.AlgoOptions = 2;
             }
             else
             {

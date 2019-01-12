@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class PCAfusion_FRM
     {
@@ -152,6 +152,7 @@
             this.Tb_InputFile.Location = new System.Drawing.Point(105, 23);
             this.Tb_InputFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_InputFile.Name = "Tb_InputFile";
+            this.Tb_InputFile.ReadOnly = true;
             this.Tb_InputFile.Size = new System.Drawing.Size(336, 25);
             this.Tb_InputFile.TabIndex = 1;
             // 
@@ -217,6 +218,7 @@
             this.Tb_InputFile1.Location = new System.Drawing.Point(105, 33);
             this.Tb_InputFile1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_InputFile1.Name = "Tb_InputFile1";
+            this.Tb_InputFile1.ReadOnly = true;
             this.Tb_InputFile1.Size = new System.Drawing.Size(336, 25);
             this.Tb_InputFile1.TabIndex = 2;
             // 

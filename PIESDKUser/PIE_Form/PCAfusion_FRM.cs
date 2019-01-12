@@ -9,7 +9,7 @@ using PIE.CommonAlgo;
 using PIE.DataSource;
 using System.Windows.Forms;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class PCAfusion_FRM : Form
     {

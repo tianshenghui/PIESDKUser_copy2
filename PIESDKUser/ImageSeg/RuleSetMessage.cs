@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
-namespace PIESDKUser
+namespace Sparkle
 {
     public class RuleSetMessage
     {
@@ -25,6 +25,7 @@ namespace PIESDKUser
         public static string OutClassResultsPath { get; set; }
         public static string OutShpPath { get; set; }
         public static int AlgoOptions { get; set; }
+        //public  enum AlgoOptions { segmentation,classification };
     }
 
 }

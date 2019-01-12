@@ -17,7 +17,7 @@ using PIE.SystemAlgo;
 using PIE.Carto;
 using PIE.DataSource;
 using PIE.Controls;
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class SegClassForm : Form
     {
@@ -131,7 +131,7 @@ namespace PIESDKUser
         
         private async void bn_Execute_Click(object sender, EventArgs e)
         {
-            Lb_result.Text = "开始执行";
+            
             //progressBar1.Visible = true;
             //progressBar.Visible = true;
             
@@ -142,9 +142,57 @@ namespace PIESDKUser
             //textBox1.Text = imagePath;
             //AnalyseImageCsharp(image, rule);
             string imagepath = tb_image.Text;
+            if (imagepath == "")
+            {
+                MessageBox.Show("请加载要处理的影像！");
+                return;
+            }
             string rulepath = tb_ruleset.Text;
+            if(rulepath=="")
+            {
+                MessageBox.Show("请加载规则集！");
+                return;
+            }
+            XmlInfo classDet = new XmlInfo(rulepath);
+            classDet.ReadRuleSet();
+            string OutShpPath = classDet.SearchAlgoParams();
+            string ClassficationPath = classDet.SearchAlgoParams2();
+            if (OutShpPath==""&&ClassficationPath=="")
+            {
+                MessageBox.Show("此规则集有误，或本系统暂不支持该规则集，\n请修改规则集并重试！");
+                return;
+            }
+            //else if (ClassficationPath != "")
+            //{
+            //    MessageBox.Show("此规则集用于分类，请先在分类参数窗口中\n" +
+            //            "进行相关设置，并点击确定按钮！");
+            //    return;
+            //}
+
+            //if(segDet!=null&&RuleSetMessage.OutShpPath==null)
+            //{
+            //    MessageBox.Show("此规则集用于分割，请先在多尺度分割参数窗口中\n" +
+            //            "进行相关设置，并点击确定按钮！");
+            //    return;
+            //}
+            if (RuleSetMessage.AlgoOptions != 1 && RuleSetMessage.AlgoOptions != 2)
+            {
+                if (ClassficationPath!="")
+                {
+                    MessageBox.Show("此规则集用于分类，请先在分类参数窗口中\n" +
+                        "进行相关设置，并点击确定按钮！");
+                    return;
+                }
+                else if (OutShpPath!="")
+                {
+                    MessageBox.Show("此规则集用于分割，请先在多尺度分割参数窗口中\n" +
+                        "进行相关设置，并点击确定按钮！");
+                    return;
+                }
+            }
             string project = tb_projectPath.Text;
             string projectName = tb_projetName.Text;
+            Lb_result.Text = "开始执行";
             //Func<string, string, bool> func = AnalyseImageCsharp;
             //Task<bool> task = new Task<bool>(() => AnalyseImageCsharp(imagepath, rulepath));
             //task.Start();
@@ -163,7 +211,7 @@ namespace PIESDKUser
             //{
             //string project = "D:\\EC\\temptest";
             //string projectName = "third";
-                Task t2 = ProgressbarStatus();
+            Task t2 = ProgressbarStatus();
                 Task<int> t1 = AnalyseImageAsync(imagepath, rulepath,project,projectName);
                 await Task.WhenAny(t1, t2);
 
@@ -172,7 +220,7 @@ namespace PIESDKUser
                 if (t1.Result == 0)
                 {
                     Lb_result.Text = "执行成功";
-                    
+                    RuleSetMessage.AlgoOptions = 0;
                     NotcancelFlag = false;
                     Console.Beep(1000, 1000);
                     MessageBox.Show("完成");
@@ -182,6 +230,7 @@ namespace PIESDKUser
                 else
                 {
                     Lb_result.Text = "执行失败,错误码为：" + t1.Result.ToString();
+                    RuleSetMessage.AlgoOptions = 0;
                     NotcancelFlag = false;
                     progressBar1.Visible = false;
                 }

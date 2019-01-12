@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PIESDKUser.Properties {
+namespace Sparkle.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

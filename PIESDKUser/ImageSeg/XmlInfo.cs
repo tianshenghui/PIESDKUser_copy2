@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     
     public class XmlInfo
@@ -41,6 +41,7 @@ namespace PIESDKUser
                 return false;
             return true;
         }
+        //用于搜索导出矢量文件的路径
         public string SearchAlgoParams()
         {
 
@@ -70,6 +71,7 @@ namespace PIESDKUser
             return outPath;
             
         }
+        //用于搜索导出分类结果的路径
         public string SearchAlgoParams2()
         {
 

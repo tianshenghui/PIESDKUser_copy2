@@ -7,7 +7,7 @@ using PIE.SystemAlgo;
 using PIE.Carto;
 using PIE.Controls;
 using System.Windows.Forms;
-namespace PIESDKUser
+namespace Sparkle
 {
     class PCAfusion:BaseCommand
     {

@@ -9,7 +9,7 @@ using PIE.CommonAlgo;
 using PIE.SystemAlgo;
 using PIE.Carto;
 using System.Runtime.InteropServices;
-namespace PIESDKUser
+namespace Sparkle
 {
     public class Neural:BaseCommand 
     {

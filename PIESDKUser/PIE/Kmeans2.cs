@@ -11,7 +11,7 @@ using PIE.DataSource;
 using PIE.Controls;
 using System.Windows.Forms;
 using System.ComponentModel;
-namespace PIESDKUser
+namespace Sparkle
 {
     class Kmeans2:BaseCommand
     {

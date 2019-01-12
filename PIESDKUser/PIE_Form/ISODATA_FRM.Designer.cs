@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class ISODATA_FRM
     {
@@ -37,13 +37,8 @@
             this.Lb_SelectedBandNum = new System.Windows.Forms.Label();
             this.Lb_BandNum = new System.Windows.Forms.Label();
             this.Gb_ParamSetting = new System.Windows.Forms.GroupBox();
-            this.Tb_MaxComCpNum = new System.Windows.Forms.TextBox();
             this.Tb_MinCenDistance = new System.Windows.Forms.TextBox();
             this.Tb_MaxSD = new System.Windows.Forms.TextBox();
-            this.Tb_MaxIteraNum = new System.Windows.Forms.TextBox();
-            this.Tb_MinPixelNum = new System.Windows.Forms.TextBox();
-            this.Tb_InitCateNum = new System.Windows.Forms.TextBox();
-            this.Tb_PreCateNum = new System.Windows.Forms.TextBox();
             this.Lb_MaxComCpNum = new System.Windows.Forms.Label();
             this.Lb_MinCenDistance = new System.Windows.Forms.Label();
             this.Lb_MaxSD = new System.Windows.Forms.Label();
@@ -56,8 +51,18 @@
             this.Tb_OutputPath = new System.Windows.Forms.TextBox();
             this.Bn_SaveAs = new System.Windows.Forms.Button();
             this.Bn_Cancel = new System.Windows.Forms.Button();
+            this.nud_PreCateNum = new System.Windows.Forms.NumericUpDown();
+            this.nud_InitCateNum = new System.Windows.Forms.NumericUpDown();
+            this.nud_MinPixelNum = new System.Windows.Forms.NumericUpDown();
+            this.nud_MaxIteraNum = new System.Windows.Forms.NumericUpDown();
+            this.nud_MaxComCpNum = new System.Windows.Forms.NumericUpDown();
             this.Gb_BandSelect.SuspendLayout();
             this.Gb_ParamSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_PreCateNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_InitCateNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MinPixelNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MaxIteraNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MaxComCpNum)).BeginInit();
             this.SuspendLayout();
             // 
             // Tb_InputFile
@@ -65,6 +70,7 @@
             this.Tb_InputFile.Location = new System.Drawing.Point(121, 30);
             this.Tb_InputFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_InputFile.Name = "Tb_InputFile";
+            this.Tb_InputFile.ReadOnly = true;
             this.Tb_InputFile.Size = new System.Drawing.Size(369, 25);
             this.Tb_InputFile.TabIndex = 1;
             // 
@@ -145,13 +151,13 @@
             // 
             // Gb_ParamSetting
             // 
-            this.Gb_ParamSetting.Controls.Add(this.Tb_MaxComCpNum);
+            this.Gb_ParamSetting.Controls.Add(this.nud_MaxComCpNum);
+            this.Gb_ParamSetting.Controls.Add(this.nud_MaxIteraNum);
+            this.Gb_ParamSetting.Controls.Add(this.nud_MinPixelNum);
+            this.Gb_ParamSetting.Controls.Add(this.nud_InitCateNum);
+            this.Gb_ParamSetting.Controls.Add(this.nud_PreCateNum);
             this.Gb_ParamSetting.Controls.Add(this.Tb_MinCenDistance);
             this.Gb_ParamSetting.Controls.Add(this.Tb_MaxSD);
-            this.Gb_ParamSetting.Controls.Add(this.Tb_MaxIteraNum);
-            this.Gb_ParamSetting.Controls.Add(this.Tb_MinPixelNum);
-            this.Gb_ParamSetting.Controls.Add(this.Tb_InitCateNum);
-            this.Gb_ParamSetting.Controls.Add(this.Tb_PreCateNum);
             this.Gb_ParamSetting.Controls.Add(this.Lb_MaxComCpNum);
             this.Gb_ParamSetting.Controls.Add(this.Lb_MinCenDistance);
             this.Gb_ParamSetting.Controls.Add(this.Lb_MaxSD);
@@ -168,74 +174,28 @@
             this.Gb_ParamSetting.TabStop = false;
             this.Gb_ParamSetting.Text = "参数设置";
             // 
-            // Tb_MaxComCpNum
-            // 
-            this.Tb_MaxComCpNum.Location = new System.Drawing.Point(170, 286);
-            this.Tb_MaxComCpNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tb_MaxComCpNum.Name = "Tb_MaxComCpNum";
-            this.Tb_MaxComCpNum.Size = new System.Drawing.Size(89, 25);
-            this.Tb_MaxComCpNum.TabIndex = 20;
-            this.Tb_MaxComCpNum.Text = "3";
-            // 
             // Tb_MinCenDistance
             // 
-            this.Tb_MinCenDistance.Location = new System.Drawing.Point(170, 244);
+            this.Tb_MinCenDistance.Location = new System.Drawing.Point(174, 251);
             this.Tb_MinCenDistance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MinCenDistance.Name = "Tb_MinCenDistance";
-            this.Tb_MinCenDistance.Size = new System.Drawing.Size(89, 25);
+            this.Tb_MinCenDistance.Size = new System.Drawing.Size(62, 25);
             this.Tb_MinCenDistance.TabIndex = 19;
             this.Tb_MinCenDistance.Text = "5";
             // 
             // Tb_MaxSD
             // 
-            this.Tb_MaxSD.Location = new System.Drawing.Point(170, 203);
+            this.Tb_MaxSD.Location = new System.Drawing.Point(174, 204);
             this.Tb_MaxSD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MaxSD.Name = "Tb_MaxSD";
-            this.Tb_MaxSD.Size = new System.Drawing.Size(89, 25);
+            this.Tb_MaxSD.Size = new System.Drawing.Size(62, 25);
             this.Tb_MaxSD.TabIndex = 18;
             this.Tb_MaxSD.Text = "9";
-            // 
-            // Tb_MaxIteraNum
-            // 
-            this.Tb_MaxIteraNum.Location = new System.Drawing.Point(170, 157);
-            this.Tb_MaxIteraNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tb_MaxIteraNum.Name = "Tb_MaxIteraNum";
-            this.Tb_MaxIteraNum.Size = new System.Drawing.Size(89, 25);
-            this.Tb_MaxIteraNum.TabIndex = 17;
-            this.Tb_MaxIteraNum.Text = "8";
-            // 
-            // Tb_MinPixelNum
-            // 
-            this.Tb_MinPixelNum.Location = new System.Drawing.Point(170, 116);
-            this.Tb_MinPixelNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tb_MinPixelNum.Name = "Tb_MinPixelNum";
-            this.Tb_MinPixelNum.Size = new System.Drawing.Size(89, 25);
-            this.Tb_MinPixelNum.TabIndex = 16;
-            this.Tb_MinPixelNum.Text = "5";
-            // 
-            // Tb_InitCateNum
-            // 
-            this.Tb_InitCateNum.Location = new System.Drawing.Point(170, 72);
-            this.Tb_InitCateNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tb_InitCateNum.Name = "Tb_InitCateNum";
-            this.Tb_InitCateNum.Size = new System.Drawing.Size(89, 25);
-            this.Tb_InitCateNum.TabIndex = 15;
-            this.Tb_InitCateNum.Text = "2";
-            // 
-            // Tb_PreCateNum
-            // 
-            this.Tb_PreCateNum.Location = new System.Drawing.Point(170, 33);
-            this.Tb_PreCateNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Tb_PreCateNum.Name = "Tb_PreCateNum";
-            this.Tb_PreCateNum.Size = new System.Drawing.Size(89, 25);
-            this.Tb_PreCateNum.TabIndex = 14;
-            this.Tb_PreCateNum.Text = "6";
-            this.Tb_PreCateNum.TextChanged += new System.EventHandler(this.Tb_PreCateNum_TextChanged);
             // 
             // Lb_MaxComCpNum
             // 
             this.Lb_MaxComCpNum.AutoSize = true;
-            this.Lb_MaxComCpNum.Location = new System.Drawing.Point(13, 291);
+            this.Lb_MaxComCpNum.Location = new System.Drawing.Point(13, 296);
             this.Lb_MaxComCpNum.Name = "Lb_MaxComCpNum";
             this.Lb_MaxComCpNum.Size = new System.Drawing.Size(112, 15);
             this.Lb_MaxComCpNum.TabIndex = 13;
@@ -244,7 +204,7 @@
             // Lb_MinCenDistance
             // 
             this.Lb_MinCenDistance.AutoSize = true;
-            this.Lb_MinCenDistance.Location = new System.Drawing.Point(13, 252);
+            this.Lb_MinCenDistance.Location = new System.Drawing.Point(13, 254);
             this.Lb_MinCenDistance.Name = "Lb_MinCenDistance";
             this.Lb_MinCenDistance.Size = new System.Drawing.Size(112, 15);
             this.Lb_MinCenDistance.TabIndex = 12;
@@ -346,6 +306,66 @@
             this.Bn_Cancel.UseVisualStyleBackColor = true;
             this.Bn_Cancel.Click += new System.EventHandler(this.Bn_Cancel_Click);
             // 
+            // nud_PreCateNum
+            // 
+            this.nud_PreCateNum.Location = new System.Drawing.Point(174, 35);
+            this.nud_PreCateNum.Name = "nud_PreCateNum";
+            this.nud_PreCateNum.Size = new System.Drawing.Size(59, 25);
+            this.nud_PreCateNum.TabIndex = 21;
+            this.nud_PreCateNum.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // nud_InitCateNum
+            // 
+            this.nud_InitCateNum.Location = new System.Drawing.Point(174, 66);
+            this.nud_InitCateNum.Name = "nud_InitCateNum";
+            this.nud_InitCateNum.Size = new System.Drawing.Size(59, 25);
+            this.nud_InitCateNum.TabIndex = 22;
+            this.nud_InitCateNum.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
+            // nud_MinPixelNum
+            // 
+            this.nud_MinPixelNum.Location = new System.Drawing.Point(174, 113);
+            this.nud_MinPixelNum.Name = "nud_MinPixelNum";
+            this.nud_MinPixelNum.Size = new System.Drawing.Size(59, 25);
+            this.nud_MinPixelNum.TabIndex = 23;
+            this.nud_MinPixelNum.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // nud_MaxIteraNum
+            // 
+            this.nud_MaxIteraNum.Location = new System.Drawing.Point(174, 157);
+            this.nud_MaxIteraNum.Name = "nud_MaxIteraNum";
+            this.nud_MaxIteraNum.Size = new System.Drawing.Size(62, 25);
+            this.nud_MaxIteraNum.TabIndex = 24;
+            this.nud_MaxIteraNum.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // nud_MaxComCpNum
+            // 
+            this.nud_MaxComCpNum.Location = new System.Drawing.Point(174, 291);
+            this.nud_MaxComCpNum.Name = "nud_MaxComCpNum";
+            this.nud_MaxComCpNum.Size = new System.Drawing.Size(62, 25);
+            this.nud_MaxComCpNum.TabIndex = 25;
+            this.nud_MaxComCpNum.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
             // ISODATA_FRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -368,6 +388,11 @@
             this.Gb_BandSelect.PerformLayout();
             this.Gb_ParamSetting.ResumeLayout(false);
             this.Gb_ParamSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_PreCateNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_InitCateNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MinPixelNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MaxIteraNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nud_MaxComCpNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,10 +409,6 @@
         private System.Windows.Forms.Label Lb_BandNum;
         private System.Windows.Forms.ListBox LB_BandDisplay;
         private System.Windows.Forms.GroupBox Gb_ParamSetting;
-        private System.Windows.Forms.TextBox Tb_MaxIteraNum;
-        private System.Windows.Forms.TextBox Tb_MinPixelNum;
-        private System.Windows.Forms.TextBox Tb_InitCateNum;
-        private System.Windows.Forms.TextBox Tb_PreCateNum;
         private System.Windows.Forms.Label Lb_MaxComCpNum;
         private System.Windows.Forms.Label Lb_MinCenDistance;
         private System.Windows.Forms.Label Lb_MaxSD;
@@ -395,7 +416,6 @@
         private System.Windows.Forms.Label Lb_MinPixelNum;
         private System.Windows.Forms.Label Lb_InitCateNum;
         private System.Windows.Forms.Label Lb_PreCateNum;
-        private System.Windows.Forms.TextBox Tb_MaxComCpNum;
         private System.Windows.Forms.TextBox Tb_MinCenDistance;
         private System.Windows.Forms.TextBox Tb_MaxSD;
         private System.Windows.Forms.Button Bn_Excecute;
@@ -403,5 +423,10 @@
         private System.Windows.Forms.TextBox Tb_OutputPath;
         private System.Windows.Forms.Button Bn_SaveAs;
         private System.Windows.Forms.Button Bn_Cancel;
+        private System.Windows.Forms.NumericUpDown nud_MaxComCpNum;
+        private System.Windows.Forms.NumericUpDown nud_MaxIteraNum;
+        private System.Windows.Forms.NumericUpDown nud_MinPixelNum;
+        private System.Windows.Forms.NumericUpDown nud_InitCateNum;
+        private System.Windows.Forms.NumericUpDown nud_PreCateNum;
     }
 }

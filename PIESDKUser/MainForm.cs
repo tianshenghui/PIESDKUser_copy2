@@ -18,7 +18,7 @@ using AnalyseImageCshap;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class MainForm : Form
     {
@@ -491,13 +491,14 @@ namespace PIESDKUser
             segClassForm.ShowDialog();
             if (RuleSetMessage.OutShpPath != null || RuleSetMessage.OutClassResultsPath != null)
             {
-                if(RuleSetMessage.OutShpPath!=null&&RuleSetMessage.AlgoOptions==0)
+                if(RuleSetMessage.OutShpPath!=null)
                 {
                     ILayer layer = LayerFactory.CreateDefaultLayer(RuleSetMessage.OutShpPath);
                     if (layer != null)
                     {
                         axMapControl2.FocusMap.AddLayer(layer);
                         axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                        RuleSetMessage.OutShpPath = null;
                     }
                 }
                 else 
@@ -507,6 +508,7 @@ namespace PIESDKUser
                     {
                         axMapControl2.FocusMap.AddLayer(layer);
                         axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                        RuleSetMessage.OutClassResultsPath = null;
                     }
                 }
             }

@@ -15,7 +15,7 @@ using PIE.Controls;
 using PIE.SystemAlgo;
 using PIE.Framework;
 using AnalyseImageCshap;
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class ISODATA_FRM : Form
     {
@@ -71,13 +71,26 @@ namespace PIESDKUser
             else
             {
                 iSODataParams.LowBands = lowBand;
-                iSODataParams.ProspClassNum = Convert.ToInt16(Tb_PreCateNum.Text);
-                iSODataParams.InitClassNum = Convert.ToInt16(Tb_InitCateNum.Text);
-                iSODataParams.MinSam = Convert.ToInt16(Tb_MinPixelNum.Text);
-                iSODataParams.MaxMerge = Convert.ToInt16(Tb_MaxComCpNum.Text);
-                iSODataParams.MaxLoop = Convert.ToInt16(Tb_MaxIteraNum.Text);
-                iSODataParams.MinDis = Convert.ToDouble(Tb_MinCenDistance.Text);
-                iSODataParams.Dev = Convert.ToDouble(Tb_MaxSD.Text);
+                ISODataParams.ProspClassNum = Convert.ToInt16(nud_PreCateNum.Value);
+                iSODataParams.InitClassNum = Convert.ToInt16(nud_InitCateNum.Value);
+                iSODataParams.MinSam = Convert.ToInt16(nud_MinPixelNum.Value);
+                iSODataParams.MaxMerge = Convert.ToInt16(nud_MaxComCpNum.Value);
+                iSODataParams.MaxLoop = Convert.ToInt16(nud_MaxIteraNum.Value);
+                try
+                {
+                    iSODataParams.MinDis = Convert.ToDouble(Tb_MinCenDistance.Text);
+                    iSODataParams.Dev = Convert.ToDouble(Tb_MaxSD.Text);
+                }
+                catch(Exception exp)
+                {
+                    MessageBox.Show("最大标准差和最小中心距离应为数字，请检查！");
+                    return;
+                }
+                if(iSODataParams.MinDis<0||iSODataParams.Dev<0)
+                {
+                    MessageBox.Show("最大标准差和最小中心距离应为正数，请检查！");
+                    return;
+                }
                 iSODataParams.FuncName = "ISODATA分类";
                 iSODataParams.FileTypeCode = "GTiff";
                 ISODataClassificationAlgo iSODataClassificationAlgo = new ISODataClassificationAlgo

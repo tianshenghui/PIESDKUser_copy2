@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PIE.CommonAlgo;
 using PIE.DataSource;
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class Form_KMeans : Form
     {
@@ -44,7 +44,20 @@ namespace PIESDKUser
                 KMeansParams.LowBands = lowBand;
                 KMeansParams.ClassNum = Convert.ToInt16(nud_ClassNums.Value);
                 KMeansParams.Maxloop = Convert.ToInt16(nud_MaxIterNums.Value);
-                KMeansParams.Threshold = Convert.ToDouble(tb_KillThres.Text);
+                try
+                {
+                    KMeansParams.Threshold = Convert.ToDouble(tb_KillThres.Text);
+                }
+                catch (Exception exp)
+                {
+                    MessageBox.Show("请输入数字！");
+                    return;
+                }
+                if (KMeansParams.Threshold < 0 || KMeansParams.Threshold > 1)
+                {
+                    MessageBox.Show("终止阈值在0-1之间，请重新输入！");
+                    return;
+                }
                 DialogResult = DialogResult.OK;
             }
         }

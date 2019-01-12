@@ -1,4 +1,4 @@
-﻿namespace PIESDKUser
+﻿namespace Sparkle
 {
     partial class MainForm
     {
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.axMapControl2 = new PIE.AxControls.MapControl();
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -58,8 +57,8 @@
             this.ISODATA = new System.Windows.Forms.ToolStripButton();
             this.PCAfusion = new System.Windows.Forms.ToolStripButton();
             this.NN_Classification = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.contextMenuStrip_mapcontrol = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ZoomInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -390,16 +389,6 @@
             this.NN_Classification.Text = "神经网络聚类";
             this.NN_Classification.Click += new System.EventHandler(this.toolStripButton1_Click_2);
             // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton2.Text = "面向对象分类";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -410,6 +399,16 @@
             this.toolStripButton3.Text = "KMeans分类";
             this.toolStripButton3.ToolTipText = "K-Means分类";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton2.Text = "面向对象分类";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
             // splitContainer1
             // 
@@ -437,7 +436,7 @@
             // 
             // ZoomInToolStripMenuItem
             // 
-            this.ZoomInToolStripMenuItem.Image = global::PIESDKUser.Properties.Resources.CartoGraphy_ZoomIn;
+            this.ZoomInToolStripMenuItem.Image = global::Sparkle.Properties.Resources.CartoGraphy_ZoomIn;
             this.ZoomInToolStripMenuItem.Name = "ZoomInToolStripMenuItem";
             this.ZoomInToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
             this.ZoomInToolStripMenuItem.Text = "放大";
@@ -780,7 +779,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "遥感图像处理系统";
+            this.Text = "Sparkle遥感图像分类";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using PIE.CommonAlgo;
 using PIE.DataSource;
 
-namespace PIESDKUser
+namespace Sparkle
 {
     public partial class Neural_FRM : Form
     {
