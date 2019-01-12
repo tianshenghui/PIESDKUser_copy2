@@ -75,6 +75,12 @@
             this.lb_username2 = new System.Windows.Forms.Label();
             this.lb_process = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.lb_projectPath = new System.Windows.Forms.Label();
+            this.tb_projectPath = new System.Windows.Forms.TextBox();
+            this.bn_SaveProj = new System.Windows.Forms.Button();
+            this.lb_projectName = new System.Windows.Forms.Label();
+            this.tb_projetName = new System.Windows.Forms.TextBox();
+            this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -83,9 +89,9 @@
             // 
             // bn_Execute
             // 
-            this.bn_Execute.Location = new System.Drawing.Point(284, 470);
+            this.bn_Execute.Location = new System.Drawing.Point(284, 557);
             this.bn_Execute.Name = "bn_Execute";
-            this.bn_Execute.Size = new System.Drawing.Size(104, 25);
+            this.bn_Execute.Size = new System.Drawing.Size(104, 37);
             this.bn_Execute.TabIndex = 1;
             this.bn_Execute.Text = "执行算法";
             this.bn_Execute.UseVisualStyleBackColor = true;
@@ -99,7 +105,7 @@
             this.ClassSettingToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(842, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -120,9 +126,9 @@
             // 
             // bn_LoadRuleSet
             // 
-            this.bn_LoadRuleSet.Location = new System.Drawing.Point(684, 418);
+            this.bn_LoadRuleSet.Location = new System.Drawing.Point(684, 423);
             this.bn_LoadRuleSet.Name = "bn_LoadRuleSet";
-            this.bn_LoadRuleSet.Size = new System.Drawing.Size(104, 26);
+            this.bn_LoadRuleSet.Size = new System.Drawing.Size(146, 34);
             this.bn_LoadRuleSet.TabIndex = 3;
             this.bn_LoadRuleSet.Text = "加载规则集";
             this.bn_LoadRuleSet.UseVisualStyleBackColor = true;
@@ -132,7 +138,7 @@
             // 
             this.bn_LoadImage.Location = new System.Drawing.Point(684, 382);
             this.bn_LoadImage.Name = "bn_LoadImage";
-            this.bn_LoadImage.Size = new System.Drawing.Size(104, 25);
+            this.bn_LoadImage.Size = new System.Drawing.Size(146, 35);
             this.bn_LoadImage.TabIndex = 4;
             this.bn_LoadImage.Text = "加载影像";
             this.bn_LoadImage.UseVisualStyleBackColor = true;
@@ -140,7 +146,7 @@
             // 
             // tb_image
             // 
-            this.tb_image.Location = new System.Drawing.Point(194, 384);
+            this.tb_image.Location = new System.Drawing.Point(194, 387);
             this.tb_image.Name = "tb_image";
             this.tb_image.Size = new System.Drawing.Size(484, 25);
             this.tb_image.TabIndex = 0;
@@ -149,7 +155,7 @@
             // lb_image
             // 
             this.lb_image.AutoSize = true;
-            this.lb_image.Location = new System.Drawing.Point(37, 387);
+            this.lb_image.Location = new System.Drawing.Point(37, 393);
             this.lb_image.Name = "lb_image";
             this.lb_image.Size = new System.Drawing.Size(82, 15);
             this.lb_image.TabIndex = 5;
@@ -158,7 +164,7 @@
             // lb_ruleset
             // 
             this.lb_ruleset.AutoSize = true;
-            this.lb_ruleset.Location = new System.Drawing.Point(37, 429);
+            this.lb_ruleset.Location = new System.Drawing.Point(37, 434);
             this.lb_ruleset.Name = "lb_ruleset";
             this.lb_ruleset.Size = new System.Drawing.Size(97, 15);
             this.lb_ruleset.TabIndex = 6;
@@ -167,7 +173,7 @@
             // 
             // tb_ruleset
             // 
-            this.tb_ruleset.Location = new System.Drawing.Point(194, 420);
+            this.tb_ruleset.Location = new System.Drawing.Point(194, 428);
             this.tb_ruleset.Name = "tb_ruleset";
             this.tb_ruleset.Size = new System.Drawing.Size(484, 25);
             this.tb_ruleset.TabIndex = 7;
@@ -183,7 +189,7 @@
             // Lb_status
             // 
             this.Lb_status.AutoSize = true;
-            this.Lb_status.Location = new System.Drawing.Point(37, 473);
+            this.Lb_status.Location = new System.Drawing.Point(37, 571);
             this.Lb_status.Name = "Lb_status";
             this.Lb_status.Size = new System.Drawing.Size(52, 15);
             this.Lb_status.TabIndex = 10;
@@ -200,30 +206,30 @@
             // Lb_result
             // 
             this.Lb_result.AutoSize = true;
-            this.Lb_result.Location = new System.Drawing.Point(89, 473);
+            this.Lb_result.Location = new System.Drawing.Point(89, 567);
             this.Lb_result.Name = "Lb_result";
             this.Lb_result.Size = new System.Drawing.Size(0, 15);
             this.Lb_result.TabIndex = 11;
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(418, 470);
+            this.progressBar1.Location = new System.Drawing.Point(418, 559);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(260, 23);
+            this.progressBar1.Size = new System.Drawing.Size(260, 35);
             this.progressBar1.TabIndex = 12;
             // 
             // Pb_download
             // 
             this.Pb_download.Location = new System.Drawing.Point(418, 345);
             this.Pb_download.Name = "Pb_download";
-            this.Pb_download.Size = new System.Drawing.Size(260, 23);
+            this.Pb_download.Size = new System.Drawing.Size(260, 36);
             this.Pb_download.TabIndex = 10;
             // 
             // Bn_FTPdownload
             // 
             this.Bn_FTPdownload.Location = new System.Drawing.Point(199, 232);
             this.Bn_FTPdownload.Name = "Bn_FTPdownload";
-            this.Bn_FTPdownload.Size = new System.Drawing.Size(104, 23);
+            this.Bn_FTPdownload.Size = new System.Drawing.Size(104, 32);
             this.Bn_FTPdownload.TabIndex = 11;
             this.Bn_FTPdownload.Text = "开始下载";
             this.Bn_FTPdownload.UseVisualStyleBackColor = true;
@@ -279,9 +285,9 @@
             // 
             // Bn_SaveDownload
             // 
-            this.Bn_SaveDownload.Location = new System.Drawing.Point(680, 158);
+            this.Bn_SaveDownload.Location = new System.Drawing.Point(680, 154);
             this.Bn_SaveDownload.Name = "Bn_SaveDownload";
-            this.Bn_SaveDownload.Size = new System.Drawing.Size(104, 25);
+            this.Bn_SaveDownload.Size = new System.Drawing.Size(104, 34);
             this.Bn_SaveDownload.TabIndex = 6;
             this.Bn_SaveDownload.Text = "...";
             this.Bn_SaveDownload.UseVisualStyleBackColor = true;
@@ -359,9 +365,9 @@
             // 
             // Bn_SaveAllFile
             // 
-            this.Bn_SaveAllFile.Location = new System.Drawing.Point(681, 195);
+            this.Bn_SaveAllFile.Location = new System.Drawing.Point(681, 190);
             this.Bn_SaveAllFile.Name = "Bn_SaveAllFile";
-            this.Bn_SaveAllFile.Size = new System.Drawing.Size(103, 23);
+            this.Bn_SaveAllFile.Size = new System.Drawing.Size(103, 31);
             this.Bn_SaveAllFile.TabIndex = 12;
             this.Bn_SaveAllFile.Text = "...";
             this.Bn_SaveAllFile.UseVisualStyleBackColor = true;
@@ -371,7 +377,7 @@
             // 
             this.bn_downFile2.Location = new System.Drawing.Point(199, 238);
             this.bn_downFile2.Name = "bn_downFile2";
-            this.bn_downFile2.Size = new System.Drawing.Size(104, 23);
+            this.bn_downFile2.Size = new System.Drawing.Size(104, 35);
             this.bn_downFile2.TabIndex = 11;
             this.bn_downFile2.Text = "开始下载";
             this.bn_downFile2.UseVisualStyleBackColor = true;
@@ -460,17 +466,64 @@
             // lb_process
             // 
             this.lb_process.AutoSize = true;
-            this.lb_process.Location = new System.Drawing.Point(40, 346);
+            this.lb_process.Location = new System.Drawing.Point(37, 355);
             this.lb_process.Name = "lb_process";
             this.lb_process.Size = new System.Drawing.Size(67, 15);
             this.lb_process.TabIndex = 13;
             this.lb_process.Text = "下载进度";
             // 
+            // lb_projectPath
+            // 
+            this.lb_projectPath.AutoSize = true;
+            this.lb_projectPath.Location = new System.Drawing.Point(37, 474);
+            this.lb_projectPath.Name = "lb_projectPath";
+            this.lb_projectPath.Size = new System.Drawing.Size(112, 15);
+            this.lb_projectPath.TabIndex = 15;
+            this.lb_projectPath.Text = "输出项目路径：";
+            // 
+            // tb_projectPath
+            // 
+            this.tb_projectPath.Location = new System.Drawing.Point(194, 469);
+            this.tb_projectPath.Name = "tb_projectPath";
+            this.tb_projectPath.Size = new System.Drawing.Size(484, 25);
+            this.tb_projectPath.TabIndex = 16;
+            // 
+            // bn_SaveProj
+            // 
+            this.bn_SaveProj.Location = new System.Drawing.Point(685, 463);
+            this.bn_SaveProj.Name = "bn_SaveProj";
+            this.bn_SaveProj.Size = new System.Drawing.Size(145, 36);
+            this.bn_SaveProj.TabIndex = 18;
+            this.bn_SaveProj.Text = "将项目保存到";
+            this.bn_SaveProj.UseVisualStyleBackColor = true;
+            this.bn_SaveProj.Click += new System.EventHandler(this.bn_SaveProj_Click);
+            // 
+            // lb_projectName
+            // 
+            this.lb_projectName.AutoSize = true;
+            this.lb_projectName.Location = new System.Drawing.Point(37, 512);
+            this.lb_projectName.Name = "lb_projectName";
+            this.lb_projectName.Size = new System.Drawing.Size(97, 15);
+            this.lb_projectName.TabIndex = 19;
+            this.lb_projectName.Text = "输出项目名：";
+            // 
+            // tb_projetName
+            // 
+            this.tb_projetName.Location = new System.Drawing.Point(194, 506);
+            this.tb_projetName.Name = "tb_projetName";
+            this.tb_projetName.Size = new System.Drawing.Size(484, 25);
+            this.tb_projetName.TabIndex = 21;
+            // 
             // SegClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 645);
+            this.ClientSize = new System.Drawing.Size(842, 645);
+            this.Controls.Add(this.tb_projetName);
+            this.Controls.Add(this.lb_projectName);
+            this.Controls.Add(this.bn_SaveProj);
+            this.Controls.Add(this.tb_projectPath);
+            this.Controls.Add(this.lb_projectPath);
             this.Controls.Add(this.lb_process);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.Pb_download);
@@ -550,6 +603,12 @@
         private System.Windows.Forms.Label lb_process;
         private System.Windows.Forms.Button Bn_SaveAllFile;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label lb_projectPath;
+        private System.Windows.Forms.TextBox tb_projectPath;
+        private System.Windows.Forms.Button bn_SaveProj;
+        private System.Windows.Forms.Label lb_projectName;
+        private System.Windows.Forms.TextBox tb_projetName;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
     }
 }
 

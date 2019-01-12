@@ -60,14 +60,14 @@ namespace PIESDKUser
             //SegSetting segSetting = new SegSetting();
             //segSetting.ShowDialog();
         }
-        Task<int> AnalyseImageAsync(string imagePath,string rulesetPath)
+        Task<int> AnalyseImageAsync(string imagePath,string rulesetPath,string project,string projectName)
         {
             //backgroundWorker = new BackgroundWorker();
             //backgroundWorker.WorkerReportsProgress = true;
             //var tokenSource = new CancellationTokenSource();
             //CancellationToken ct = tokenSource.Token;
           return Task.Run(() =>
-                Class1.AnalyseImage(imagePath, rulesetPath));
+                Class1.AnalyseImage(imagePath, rulesetPath,project,projectName));
             
         }
         Task<bool> FTPdownloadAsync(string FTPURL, string filePath, string FTPusername, string FTPpassword, ProgressBar pb)
@@ -143,6 +143,8 @@ namespace PIESDKUser
             //AnalyseImageCsharp(image, rule);
             string imagepath = tb_image.Text;
             string rulepath = tb_ruleset.Text;
+            string project = tb_projectPath.Text;
+            string projectName = tb_projetName.Text;
             //Func<string, string, bool> func = AnalyseImageCsharp;
             //Task<bool> task = new Task<bool>(() => AnalyseImageCsharp(imagepath, rulepath));
             //task.Start();
@@ -159,8 +161,10 @@ namespace PIESDKUser
             //progressBar1.
             //try
             //{
+            //string project = "D:\\EC\\temptest";
+            //string projectName = "third";
                 Task t2 = ProgressbarStatus();
-                Task<int> t1 = AnalyseImageAsync(imagepath, rulepath);
+                Task<int> t1 = AnalyseImageAsync(imagepath, rulepath,project,projectName);
                 await Task.WhenAny(t1, t2);
 
 
@@ -168,7 +172,10 @@ namespace PIESDKUser
                 if (t1.Result == 0)
                 {
                     Lb_result.Text = "执行成功";
+                    
                     NotcancelFlag = false;
+                    Console.Beep(1000, 1000);
+                    MessageBox.Show("完成");
                     Close();
                 }
 
@@ -289,6 +296,15 @@ namespace PIESDKUser
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
                 tb_filedownPath2.Text= folderBrowserDialog1.SelectedPath+"\\";
+            }
+        }
+
+        private void bn_SaveProj_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.Description = "将项目文件保存到";
+            if (folderBrowserDialog2.ShowDialog() == DialogResult.OK)
+            {
+                tb_projectPath.Text = folderBrowserDialog2.SelectedPath;
             }
         }
 

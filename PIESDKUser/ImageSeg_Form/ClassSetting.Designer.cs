@@ -102,9 +102,9 @@
             // 
             // Bn_SaveClassResult
             // 
-            this.Bn_SaveClassResult.Location = new System.Drawing.Point(375, 304);
+            this.Bn_SaveClassResult.Location = new System.Drawing.Point(375, 299);
             this.Bn_SaveClassResult.Name = "Bn_SaveClassResult";
-            this.Bn_SaveClassResult.Size = new System.Drawing.Size(75, 25);
+            this.Bn_SaveClassResult.Size = new System.Drawing.Size(75, 33);
             this.Bn_SaveClassResult.TabIndex = 4;
             this.Bn_SaveClassResult.Text = "另存为";
             this.Bn_SaveClassResult.UseVisualStyleBackColor = true;

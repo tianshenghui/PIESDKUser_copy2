@@ -54,7 +54,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\bin2\</OutputPath>
+    <OutputPath>..\..\bin3\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
@@ -115,7 +115,7 @@
   <ItemGroup>
     <Reference Include="AnalyseImageCshap, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Trimble\eCognition Developer 64 9.0\bin\AnalyseImageCshap.dll</HintPath>
+      <HintPath>..\..\bin3\AnalyseImageCshap.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -230,6 +230,7 @@
     <Compile Include="ImageSeg\ExecuteEC.cs" />
     <Compile Include="FTP\FTPdownload.cs" />
     <Compile Include="PIE\FullExtent.cs" />
+    <Compile Include="PIE\Kmeans2.cs" />
     <Compile Include="PIE_Form\ISODATA_FRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +245,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PIE\Neural.cs" />
+    <Compile Include="PIE_Form\KMeans_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PIE_Form\KMeans_FRM.Designer.cs">
+      <DependentUpon>KMeans_FRM.cs</DependentUpon>
+    </Compile>
     <Compile Include="PIE_Form\Neural_FRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,7 +260,6 @@
     <Compile Include="PIE\PCAfusion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PIE\KMeans.cs" />
     <Compile Include="PIE_Form\PCAfusion_FRM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PIE_Form\KMeans_FRM.resx">
+      <DependentUpon>KMeans_FRM.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PIE_Form\Neural_FRM.resx">
       <DependentUpon>Neural_FRM.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageSeg_Form\SegSetting.resx">
       <DependentUpon>SegSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="PIESDKUser.ruleset" />
     <None Include="PIESDKUser_TemporaryKey.pfx" />

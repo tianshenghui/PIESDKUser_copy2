@@ -70,10 +70,10 @@
             // 
             // Bn_ChooseFile
             // 
-            this.Bn_ChooseFile.Location = new System.Drawing.Point(513, 30);
+            this.Bn_ChooseFile.Location = new System.Drawing.Point(513, 27);
             this.Bn_ChooseFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_ChooseFile.Name = "Bn_ChooseFile";
-            this.Bn_ChooseFile.Size = new System.Drawing.Size(81, 23);
+            this.Bn_ChooseFile.Size = new System.Drawing.Size(105, 33);
             this.Bn_ChooseFile.TabIndex = 3;
             this.Bn_ChooseFile.Text = "...";
             this.Bn_ChooseFile.UseVisualStyleBackColor = true;
@@ -82,7 +82,7 @@
             // Lb_InputFile
             // 
             this.Lb_InputFile.AutoSize = true;
-            this.Lb_InputFile.Location = new System.Drawing.Point(29, 34);
+            this.Lb_InputFile.Location = new System.Drawing.Point(29, 35);
             this.Lb_InputFile.Name = "Lb_InputFile";
             this.Lb_InputFile.Size = new System.Drawing.Size(67, 15);
             this.Lb_InputFile.TabIndex = 4;
@@ -98,7 +98,7 @@
             this.Gb_BandSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gb_BandSelect.Name = "Gb_BandSelect";
             this.Gb_BandSelect.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gb_BandSelect.Size = new System.Drawing.Size(243, 377);
+            this.Gb_BandSelect.Size = new System.Drawing.Size(301, 377);
             this.Gb_BandSelect.TabIndex = 5;
             this.Gb_BandSelect.TabStop = false;
             this.Gb_BandSelect.Text = "波段选择";
@@ -107,20 +107,20 @@
             // 
             this.LB_BandDisplay.FormattingEnabled = true;
             this.LB_BandDisplay.ItemHeight = 15;
-            this.LB_BandDisplay.Location = new System.Drawing.Point(18, 22);
+            this.LB_BandDisplay.Location = new System.Drawing.Point(17, 22);
             this.LB_BandDisplay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LB_BandDisplay.Name = "LB_BandDisplay";
             this.LB_BandDisplay.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.LB_BandDisplay.Size = new System.Drawing.Size(207, 319);
+            this.LB_BandDisplay.Size = new System.Drawing.Size(263, 289);
             this.LB_BandDisplay.TabIndex = 6;
             this.LB_BandDisplay.SelectedIndexChanged += new System.EventHandler(this.LB_BandDisplay_SelectedIndexChanged);
             // 
             // Bn_ClearBand
             // 
-            this.Bn_ClearBand.Location = new System.Drawing.Point(157, 347);
+            this.Bn_ClearBand.Location = new System.Drawing.Point(207, 338);
             this.Bn_ClearBand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_ClearBand.Name = "Bn_ClearBand";
-            this.Bn_ClearBand.Size = new System.Drawing.Size(67, 22);
+            this.Bn_ClearBand.Size = new System.Drawing.Size(73, 30);
             this.Bn_ClearBand.TabIndex = 2;
             this.Bn_ClearBand.Text = "清空";
             this.Bn_ClearBand.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             // Lb_SelectedBandNum
             // 
             this.Lb_SelectedBandNum.AutoSize = true;
-            this.Lb_SelectedBandNum.Location = new System.Drawing.Point(5, 350);
+            this.Lb_SelectedBandNum.Location = new System.Drawing.Point(5, 345);
             this.Lb_SelectedBandNum.Name = "Lb_SelectedBandNum";
             this.Lb_SelectedBandNum.Size = new System.Drawing.Size(112, 15);
             this.Lb_SelectedBandNum.TabIndex = 1;
@@ -138,7 +138,7 @@
             // Lb_BandNum
             // 
             this.Lb_BandNum.AutoSize = true;
-            this.Lb_BandNum.Location = new System.Drawing.Point(130, 350);
+            this.Lb_BandNum.Location = new System.Drawing.Point(157, 345);
             this.Lb_BandNum.Name = "Lb_BandNum";
             this.Lb_BandNum.Size = new System.Drawing.Size(0, 15);
             this.Lb_BandNum.TabIndex = 0;
@@ -159,18 +159,18 @@
             this.Gb_ParamSetting.Controls.Add(this.Lb_MinPixelNum);
             this.Gb_ParamSetting.Controls.Add(this.Lb_InitCateNum);
             this.Gb_ParamSetting.Controls.Add(this.Lb_PreCateNum);
-            this.Gb_ParamSetting.Location = new System.Drawing.Point(312, 92);
+            this.Gb_ParamSetting.Location = new System.Drawing.Point(373, 91);
             this.Gb_ParamSetting.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Gb_ParamSetting.Name = "Gb_ParamSetting";
             this.Gb_ParamSetting.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Gb_ParamSetting.Size = new System.Drawing.Size(236, 369);
+            this.Gb_ParamSetting.Size = new System.Drawing.Size(315, 369);
             this.Gb_ParamSetting.TabIndex = 6;
             this.Gb_ParamSetting.TabStop = false;
             this.Gb_ParamSetting.Text = "参数设置";
             // 
             // Tb_MaxComCpNum
             // 
-            this.Tb_MaxComCpNum.Location = new System.Drawing.Point(132, 251);
+            this.Tb_MaxComCpNum.Location = new System.Drawing.Point(170, 286);
             this.Tb_MaxComCpNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MaxComCpNum.Name = "Tb_MaxComCpNum";
             this.Tb_MaxComCpNum.Size = new System.Drawing.Size(89, 25);
@@ -179,7 +179,7 @@
             // 
             // Tb_MinCenDistance
             // 
-            this.Tb_MinCenDistance.Location = new System.Drawing.Point(132, 216);
+            this.Tb_MinCenDistance.Location = new System.Drawing.Point(170, 244);
             this.Tb_MinCenDistance.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MinCenDistance.Name = "Tb_MinCenDistance";
             this.Tb_MinCenDistance.Size = new System.Drawing.Size(89, 25);
@@ -188,7 +188,7 @@
             // 
             // Tb_MaxSD
             // 
-            this.Tb_MaxSD.Location = new System.Drawing.Point(132, 181);
+            this.Tb_MaxSD.Location = new System.Drawing.Point(170, 203);
             this.Tb_MaxSD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MaxSD.Name = "Tb_MaxSD";
             this.Tb_MaxSD.Size = new System.Drawing.Size(89, 25);
@@ -197,7 +197,7 @@
             // 
             // Tb_MaxIteraNum
             // 
-            this.Tb_MaxIteraNum.Location = new System.Drawing.Point(132, 143);
+            this.Tb_MaxIteraNum.Location = new System.Drawing.Point(170, 157);
             this.Tb_MaxIteraNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MaxIteraNum.Name = "Tb_MaxIteraNum";
             this.Tb_MaxIteraNum.Size = new System.Drawing.Size(89, 25);
@@ -206,7 +206,7 @@
             // 
             // Tb_MinPixelNum
             // 
-            this.Tb_MinPixelNum.Location = new System.Drawing.Point(132, 104);
+            this.Tb_MinPixelNum.Location = new System.Drawing.Point(170, 116);
             this.Tb_MinPixelNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_MinPixelNum.Name = "Tb_MinPixelNum";
             this.Tb_MinPixelNum.Size = new System.Drawing.Size(89, 25);
@@ -215,7 +215,7 @@
             // 
             // Tb_InitCateNum
             // 
-            this.Tb_InitCateNum.Location = new System.Drawing.Point(132, 67);
+            this.Tb_InitCateNum.Location = new System.Drawing.Point(170, 72);
             this.Tb_InitCateNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_InitCateNum.Name = "Tb_InitCateNum";
             this.Tb_InitCateNum.Size = new System.Drawing.Size(89, 25);
@@ -224,17 +224,18 @@
             // 
             // Tb_PreCateNum
             // 
-            this.Tb_PreCateNum.Location = new System.Drawing.Point(132, 28);
+            this.Tb_PreCateNum.Location = new System.Drawing.Point(170, 33);
             this.Tb_PreCateNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_PreCateNum.Name = "Tb_PreCateNum";
             this.Tb_PreCateNum.Size = new System.Drawing.Size(89, 25);
             this.Tb_PreCateNum.TabIndex = 14;
             this.Tb_PreCateNum.Text = "6";
+            this.Tb_PreCateNum.TextChanged += new System.EventHandler(this.Tb_PreCateNum_TextChanged);
             // 
             // Lb_MaxComCpNum
             // 
             this.Lb_MaxComCpNum.AutoSize = true;
-            this.Lb_MaxComCpNum.Location = new System.Drawing.Point(13, 253);
+            this.Lb_MaxComCpNum.Location = new System.Drawing.Point(13, 291);
             this.Lb_MaxComCpNum.Name = "Lb_MaxComCpNum";
             this.Lb_MaxComCpNum.Size = new System.Drawing.Size(112, 15);
             this.Lb_MaxComCpNum.TabIndex = 13;
@@ -243,7 +244,7 @@
             // Lb_MinCenDistance
             // 
             this.Lb_MinCenDistance.AutoSize = true;
-            this.Lb_MinCenDistance.Location = new System.Drawing.Point(13, 218);
+            this.Lb_MinCenDistance.Location = new System.Drawing.Point(13, 252);
             this.Lb_MinCenDistance.Name = "Lb_MinCenDistance";
             this.Lb_MinCenDistance.Size = new System.Drawing.Size(112, 15);
             this.Lb_MinCenDistance.TabIndex = 12;
@@ -252,7 +253,7 @@
             // Lb_MaxSD
             // 
             this.Lb_MaxSD.AutoSize = true;
-            this.Lb_MaxSD.Location = new System.Drawing.Point(13, 183);
+            this.Lb_MaxSD.Location = new System.Drawing.Point(13, 211);
             this.Lb_MaxSD.Name = "Lb_MaxSD";
             this.Lb_MaxSD.Size = new System.Drawing.Size(97, 15);
             this.Lb_MaxSD.TabIndex = 11;
@@ -261,7 +262,7 @@
             // Lb_MaxIteraNum
             // 
             this.Lb_MaxIteraNum.AutoSize = true;
-            this.Lb_MaxIteraNum.Location = new System.Drawing.Point(13, 146);
+            this.Lb_MaxIteraNum.Location = new System.Drawing.Point(13, 167);
             this.Lb_MaxIteraNum.Name = "Lb_MaxIteraNum";
             this.Lb_MaxIteraNum.Size = new System.Drawing.Size(112, 15);
             this.Lb_MaxIteraNum.TabIndex = 10;
@@ -270,7 +271,7 @@
             // Lb_MinPixelNum
             // 
             this.Lb_MinPixelNum.AutoSize = true;
-            this.Lb_MinPixelNum.Location = new System.Drawing.Point(13, 107);
+            this.Lb_MinPixelNum.Location = new System.Drawing.Point(13, 123);
             this.Lb_MinPixelNum.Name = "Lb_MinPixelNum";
             this.Lb_MinPixelNum.Size = new System.Drawing.Size(97, 15);
             this.Lb_MinPixelNum.TabIndex = 9;
@@ -279,7 +280,7 @@
             // Lb_InitCateNum
             // 
             this.Lb_InitCateNum.AutoSize = true;
-            this.Lb_InitCateNum.Location = new System.Drawing.Point(13, 70);
+            this.Lb_InitCateNum.Location = new System.Drawing.Point(13, 77);
             this.Lb_InitCateNum.Name = "Lb_InitCateNum";
             this.Lb_InitCateNum.Size = new System.Drawing.Size(82, 15);
             this.Lb_InitCateNum.TabIndex = 8;
@@ -288,7 +289,7 @@
             // Lb_PreCateNum
             // 
             this.Lb_PreCateNum.AutoSize = true;
-            this.Lb_PreCateNum.Location = new System.Drawing.Point(13, 31);
+            this.Lb_PreCateNum.Location = new System.Drawing.Point(13, 38);
             this.Lb_PreCateNum.Name = "Lb_PreCateNum";
             this.Lb_PreCateNum.Size = new System.Drawing.Size(82, 15);
             this.Lb_PreCateNum.TabIndex = 7;
@@ -296,10 +297,10 @@
             // 
             // Bn_Excecute
             // 
-            this.Bn_Excecute.Location = new System.Drawing.Point(40, 535);
+            this.Bn_Excecute.Location = new System.Drawing.Point(49, 581);
             this.Bn_Excecute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_Excecute.Name = "Bn_Excecute";
-            this.Bn_Excecute.Size = new System.Drawing.Size(67, 32);
+            this.Bn_Excecute.Size = new System.Drawing.Size(87, 32);
             this.Bn_Excecute.TabIndex = 7;
             this.Bn_Excecute.Text = "确定";
             this.Bn_Excecute.UseVisualStyleBackColor = true;
@@ -308,7 +309,7 @@
             // Lb_ExportFile
             // 
             this.Lb_ExportFile.AutoSize = true;
-            this.Lb_ExportFile.Location = new System.Drawing.Point(32, 491);
+            this.Lb_ExportFile.Location = new System.Drawing.Point(29, 498);
             this.Lb_ExportFile.Name = "Lb_ExportFile";
             this.Lb_ExportFile.Size = new System.Drawing.Size(67, 15);
             this.Lb_ExportFile.TabIndex = 8;
@@ -316,7 +317,7 @@
             // 
             // Tb_OutputPath
             // 
-            this.Tb_OutputPath.Location = new System.Drawing.Point(121, 488);
+            this.Tb_OutputPath.Location = new System.Drawing.Point(121, 493);
             this.Tb_OutputPath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Tb_OutputPath.Name = "Tb_OutputPath";
             this.Tb_OutputPath.ReadOnly = true;
@@ -328,7 +329,7 @@
             this.Bn_SaveAs.Location = new System.Drawing.Point(513, 488);
             this.Bn_SaveAs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_SaveAs.Name = "Bn_SaveAs";
-            this.Bn_SaveAs.Size = new System.Drawing.Size(81, 23);
+            this.Bn_SaveAs.Size = new System.Drawing.Size(105, 33);
             this.Bn_SaveAs.TabIndex = 11;
             this.Bn_SaveAs.Text = "...";
             this.Bn_SaveAs.UseVisualStyleBackColor = true;
@@ -336,10 +337,10 @@
             // 
             // Bn_Cancel
             // 
-            this.Bn_Cancel.Location = new System.Drawing.Point(444, 535);
+            this.Bn_Cancel.Location = new System.Drawing.Point(513, 581);
             this.Bn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_Cancel.Name = "Bn_Cancel";
-            this.Bn_Cancel.Size = new System.Drawing.Size(72, 32);
+            this.Bn_Cancel.Size = new System.Drawing.Size(105, 32);
             this.Bn_Cancel.TabIndex = 12;
             this.Bn_Cancel.Text = "取消";
             this.Bn_Cancel.UseVisualStyleBackColor = true;
@@ -349,7 +350,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 577);
+            this.ClientSize = new System.Drawing.Size(700, 687);
             this.Controls.Add(this.Bn_Cancel);
             this.Controls.Add(this.Bn_SaveAs);
             this.Controls.Add(this.Tb_OutputPath);

@@ -40,7 +40,6 @@
             this.lb_Scale = new System.Windows.Forms.Label();
             this.btn_execute = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.Bn_DisplayIntialParams = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,9 +66,9 @@
             // 
             // bn_SaveAs
             // 
-            this.bn_SaveAs.Location = new System.Drawing.Point(408, 204);
+            this.bn_SaveAs.Location = new System.Drawing.Point(408, 198);
             this.bn_SaveAs.Name = "bn_SaveAs";
-            this.bn_SaveAs.Size = new System.Drawing.Size(75, 23);
+            this.bn_SaveAs.Size = new System.Drawing.Size(75, 32);
             this.bn_SaveAs.TabIndex = 8;
             this.bn_SaveAs.Text = "另存为";
             this.bn_SaveAs.UseVisualStyleBackColor = true;
@@ -150,28 +149,17 @@
             this.btn_execute.Location = new System.Drawing.Point(354, 280);
             this.btn_execute.Margin = new System.Windows.Forms.Padding(4);
             this.btn_execute.Name = "btn_execute";
-            this.btn_execute.Size = new System.Drawing.Size(100, 29);
+            this.btn_execute.Size = new System.Drawing.Size(100, 40);
             this.btn_execute.TabIndex = 9;
             this.btn_execute.Text = "确定";
             this.btn_execute.UseVisualStyleBackColor = true;
             this.btn_execute.Click += new System.EventHandler(this.btn_execute_Click);
             // 
-            // Bn_DisplayIntialParams
-            // 
-            this.Bn_DisplayIntialParams.Location = new System.Drawing.Point(51, 280);
-            this.Bn_DisplayIntialParams.Name = "Bn_DisplayIntialParams";
-            this.Bn_DisplayIntialParams.Size = new System.Drawing.Size(121, 29);
-            this.Bn_DisplayIntialParams.TabIndex = 10;
-            this.Bn_DisplayIntialParams.Text = "显示初始值";
-            this.Bn_DisplayIntialParams.UseVisualStyleBackColor = true;
-            this.Bn_DisplayIntialParams.Click += new System.EventHandler(this.Bn_DisplayIntialParams_Click);
-            // 
             // SegSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 321);
-            this.Controls.Add(this.Bn_DisplayIntialParams);
+            this.ClientSize = new System.Drawing.Size(536, 344);
             this.Controls.Add(this.btn_execute);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -198,7 +186,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.TextBox tb_outpath;
         private System.Windows.Forms.Label Lb_outpath;
-        private System.Windows.Forms.Button Bn_DisplayIntialParams;
     }
 }
 

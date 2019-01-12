@@ -39,6 +39,7 @@ namespace PIESDKUser
             textBox1.Text = openFileDialog.FileName;
             neuralEx.InputFilePath = openFileDialog.FileName;
             IRasterDataset rasterDataset = DatasetFactory.OpenRasterDataset(openFileDialog.FileName, OpenMode.Update) as IRasterDataset;
+            listBox1.Items.Clear();
             for (int i = 1; i <= rasterDataset.GetBandCount(); i++)
             {
                 
@@ -61,10 +62,12 @@ namespace PIESDKUser
                     lowBand.Add(i);
             }
             neuralEx.LowBands = lowBand;
-            if(lowBand.Count<=1)
+            if (lowBand.Count <= 1)
             {
                 MessageBox.Show("请至少选择两个波段！");
             }
+            else if (textBox2.Text == "")
+                MessageBox.Show("请输入输出路径！");
             else
             {
                 neuralEx.ClassNum = Convert.ToInt16(numUD_ClassNum.Value);

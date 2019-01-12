@@ -42,16 +42,16 @@ namespace PIESDKUser
             FormBorderStyle = FormBorderStyle.None;
             StartPosition = FormStartPosition.CenterScreen;
             ShowInTaskbar = false;
-            //bitmap = new Bitmap(Properties.Resources.SplashScreen);
-            //ClientSize = bitmap.Size;
-            //using (Font font = new Font("Consoles", 10))
-            //{
-            //    using (Graphics g = Graphics.FromImage(bitmap))
-            //    {
-            //        g.DrawString(showInfo, font, Brushes.White, 130, 100);
-            //    }
-            //}
-            //BackgroundImage = bitmap;
+            bitmap = new Bitmap(Properties.Resources.SplashScreen);
+            ClientSize = bitmap.Size;
+            using (Font font = new Font("Consoles", 15))
+            {
+                using (Graphics g = Graphics.FromImage(bitmap))
+                {
+                    g.DrawString(showInfo, font, Brushes.Black, 400, 400);
+                }
+            }
+            BackgroundImage = bitmap;
         }
         protected override void Dispose(bool disposing)
         {
@@ -70,6 +70,11 @@ namespace PIESDKUser
         {
             instance = new SplashScreen();
             instance.Show();
+        }
+
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -77,10 +77,10 @@
             // 
             // Bn_Clear
             // 
-            this.Bn_Clear.Location = new System.Drawing.Point(446, 242);
+            this.Bn_Clear.Location = new System.Drawing.Point(446, 239);
             this.Bn_Clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_Clear.Name = "Bn_Clear";
-            this.Bn_Clear.Size = new System.Drawing.Size(67, 22);
+            this.Bn_Clear.Size = new System.Drawing.Size(67, 29);
             this.Bn_Clear.TabIndex = 10;
             this.Bn_Clear.Text = "清空";
             this.Bn_Clear.UseVisualStyleBackColor = true;
@@ -88,10 +88,10 @@
             // 
             // Bn_SelectAll
             // 
-            this.Bn_SelectAll.Location = new System.Drawing.Point(277, 242);
+            this.Bn_SelectAll.Location = new System.Drawing.Point(277, 239);
             this.Bn_SelectAll.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_SelectAll.Name = "Bn_SelectAll";
-            this.Bn_SelectAll.Size = new System.Drawing.Size(97, 22);
+            this.Bn_SelectAll.Size = new System.Drawing.Size(97, 29);
             this.Bn_SelectAll.TabIndex = 9;
             this.Bn_SelectAll.Text = "全选";
             this.Bn_SelectAll.UseVisualStyleBackColor = true;
@@ -108,7 +108,7 @@
             // Lb_NumSeletedBand
             // 
             this.Lb_NumSeletedBand.AutoSize = true;
-            this.Lb_NumSeletedBand.Location = new System.Drawing.Point(21, 244);
+            this.Lb_NumSeletedBand.Location = new System.Drawing.Point(6, 245);
             this.Lb_NumSeletedBand.Name = "Lb_NumSeletedBand";
             this.Lb_NumSeletedBand.Size = new System.Drawing.Size(67, 15);
             this.Lb_NumSeletedBand.TabIndex = 7;
@@ -117,11 +117,12 @@
             // Lb_BandSetting
             // 
             this.Lb_BandSetting.AutoSize = true;
-            this.Lb_BandSetting.Location = new System.Drawing.Point(19, 117);
+            this.Lb_BandSetting.Location = new System.Drawing.Point(6, 117);
             this.Lb_BandSetting.Name = "Lb_BandSetting";
             this.Lb_BandSetting.Size = new System.Drawing.Size(67, 15);
             this.Lb_BandSetting.TabIndex = 6;
             this.Lb_BandSetting.Text = "波段设置";
+            this.Lb_BandSetting.Click += new System.EventHandler(this.Lb_BandSetting_Click);
             // 
             // Lbox_BandDisplay
             // 
@@ -137,10 +138,10 @@
             // 
             // Bn_InputFile
             // 
-            this.Bn_InputFile.Location = new System.Drawing.Point(446, 23);
+            this.Bn_InputFile.Location = new System.Drawing.Point(461, 23);
             this.Bn_InputFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_InputFile.Name = "Bn_InputFile";
-            this.Bn_InputFile.Size = new System.Drawing.Size(67, 22);
+            this.Bn_InputFile.Size = new System.Drawing.Size(67, 26);
             this.Bn_InputFile.TabIndex = 3;
             this.Bn_InputFile.Text = "...";
             this.Bn_InputFile.UseVisualStyleBackColor = true;
@@ -157,7 +158,7 @@
             // Lb_InputFile
             // 
             this.Lb_InputFile.AutoSize = true;
-            this.Lb_InputFile.Location = new System.Drawing.Point(16, 23);
+            this.Lb_InputFile.Location = new System.Drawing.Point(6, 23);
             this.Lb_InputFile.Name = "Lb_InputFile";
             this.Lb_InputFile.Size = new System.Drawing.Size(67, 15);
             this.Lb_InputFile.TabIndex = 0;
@@ -202,10 +203,10 @@
             // 
             // Bn_InputFile1
             // 
-            this.Bn_InputFile1.Location = new System.Drawing.Point(446, 33);
+            this.Bn_InputFile1.Location = new System.Drawing.Point(461, 33);
             this.Bn_InputFile1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_InputFile1.Name = "Bn_InputFile1";
-            this.Bn_InputFile1.Size = new System.Drawing.Size(67, 23);
+            this.Bn_InputFile1.Size = new System.Drawing.Size(67, 25);
             this.Bn_InputFile1.TabIndex = 3;
             this.Bn_InputFile1.Text = "...";
             this.Bn_InputFile1.UseVisualStyleBackColor = true;
@@ -244,7 +245,7 @@
             "最近邻域法",
             "双线性插值法",
             "三次卷积法"});
-            this.Cb_Resample.Location = new System.Drawing.Point(131, 481);
+            this.Cb_Resample.Location = new System.Drawing.Point(153, 480);
             this.Cb_Resample.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cb_Resample.Name = "Cb_Resample";
             this.Cb_Resample.Size = new System.Drawing.Size(177, 23);
@@ -255,7 +256,7 @@
             // Lb_OutputFile
             // 
             this.Lb_OutputFile.AutoSize = true;
-            this.Lb_OutputFile.Location = new System.Drawing.Point(41, 520);
+            this.Lb_OutputFile.Location = new System.Drawing.Point(41, 526);
             this.Lb_OutputFile.Name = "Lb_OutputFile";
             this.Lb_OutputFile.Size = new System.Drawing.Size(67, 15);
             this.Lb_OutputFile.TabIndex = 5;
@@ -272,10 +273,10 @@
             // 
             // Bn_OutputFile
             // 
-            this.Bn_OutputFile.Location = new System.Drawing.Point(469, 520);
+            this.Bn_OutputFile.Location = new System.Drawing.Point(483, 520);
             this.Bn_OutputFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_OutputFile.Name = "Bn_OutputFile";
-            this.Bn_OutputFile.Size = new System.Drawing.Size(67, 22);
+            this.Bn_OutputFile.Size = new System.Drawing.Size(67, 25);
             this.Bn_OutputFile.TabIndex = 8;
             this.Bn_OutputFile.Text = "...";
             this.Bn_OutputFile.UseVisualStyleBackColor = true;
@@ -283,7 +284,7 @@
             // 
             // Bn_OK
             // 
-            this.Bn_OK.Location = new System.Drawing.Point(65, 557);
+            this.Bn_OK.Location = new System.Drawing.Point(44, 574);
             this.Bn_OK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_OK.Name = "Bn_OK";
             this.Bn_OK.Size = new System.Drawing.Size(69, 31);
@@ -294,7 +295,7 @@
             // 
             // Bn_Cancel
             // 
-            this.Bn_Cancel.Location = new System.Drawing.Point(468, 557);
+            this.Bn_Cancel.Location = new System.Drawing.Point(482, 574);
             this.Bn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Bn_Cancel.Name = "Bn_Cancel";
             this.Bn_Cancel.Size = new System.Drawing.Size(68, 31);
@@ -307,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 599);
+            this.ClientSize = new System.Drawing.Size(661, 653);
             this.Controls.Add(this.Bn_Cancel);
             this.Controls.Add(this.Bn_OK);
             this.Controls.Add(this.Bn_OutputFile);

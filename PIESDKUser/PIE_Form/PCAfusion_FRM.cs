@@ -44,7 +44,7 @@ namespace PIESDKUser
             Tb_InputFile.Text = openFileDialog.FileName;
             PCAfusionParams.MssFilePath = openFileDialog.FileName;
             IRasterDataset rasterDataset = DatasetFactory.OpenRasterDataset(openFileDialog.FileName, OpenMode.Update) as IRasterDataset;
-            //Lbox_BandDisplay.Items.Clear();
+            Lbox_BandDisplay.Items.Clear();
             for (int i = 1; i <= rasterDataset.GetBandCount(); i++)
             {
                 Lbox_BandDisplay.Items.Add("波段" + i.ToString());
@@ -111,6 +111,11 @@ namespace PIESDKUser
             }
             if (MultiBand.Count == 0 || MultiBand.Count == 1)
                 MessageBox.Show("请至少选择两个波段，请检查！");
+            else if (Tb_InputFile1.Text == "")
+                MessageBox.Show("请加载高分辨率影像！");
+            else if (Tb_OutputFile.Text == "")
+                MessageBox.Show("请输入输出路径！");
+
             else
             {
                 PCAfusionParams.MULChannels = MultiBand;
@@ -129,6 +134,11 @@ namespace PIESDKUser
         private void Bn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Lb_BandSetting_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

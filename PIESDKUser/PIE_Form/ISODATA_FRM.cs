@@ -66,6 +66,8 @@ namespace PIESDKUser
             }
             if (lowBand.Count == 0)
                 MessageBox.Show("请至少选择一个波段！");
+            else if (Tb_OutputPath.Text == "")
+                MessageBox.Show("请输入输出路径！");
             else
             {
                 iSODataParams.LowBands = lowBand;
@@ -126,6 +128,11 @@ namespace PIESDKUser
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void Tb_PreCateNum_TextChanged(object sender, EventArgs e)
         {
 
         }

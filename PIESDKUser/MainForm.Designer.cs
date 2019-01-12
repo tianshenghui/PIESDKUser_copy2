@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.axMapControl2 = new PIE.AxControls.MapControl();
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -57,8 +58,8 @@
             this.ISODATA = new System.Windows.Forms.ToolStripButton();
             this.PCAfusion = new System.Windows.Forms.ToolStripButton();
             this.NN_Classification = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.contextMenuStrip_mapcontrol = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ZoomInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -199,7 +200,7 @@
             this.ISODATA,
             this.PCAfusion,
             this.NN_Classification,
-            this.toolStripButton1,
+            this.toolStripButton3,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
@@ -389,16 +390,6 @@
             this.NN_Classification.Text = "神经网络聚类";
             this.NN_Classification.Click += new System.EventHandler(this.toolStripButton1_Click_2);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton1.Text = "K-Means分类";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click_3);
-            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -408,6 +399,17 @@
             this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton2.Text = "面向对象分类";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton3.Text = "KMeans分类";
+            this.toolStripButton3.ToolTipText = "K-Means分类";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // splitContainer1
             // 
@@ -871,12 +873,12 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         //public System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton_RasterIdentify;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_mapcontrol;
         private System.Windows.Forms.ToolStripMenuItem ZoomInToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
 
         public System.Windows.Forms.Label myLabel
         {

@@ -71,7 +71,23 @@ namespace PIESDKUser
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            if (RuleSetMessage.RuleSetPath != null)
+            {
+                XmlInfo xml_doc = new XmlInfo(RuleSetMessage.RuleSetPath, "vrblValScale", "vrblHCShape", "vrblHCArea");
+                xml_doc.ReadRuleSet();
+                string[] searchedItems = xml_doc.SearchNdVal();
+                txt_scale.Text = searchedItems[0];
+                txt_shape.Text = searchedItems[1];
+                txt_compactness.Text = searchedItems[2];
+                //tb_outpath.Text = xml_doc.SearchAlgoParams();
+                //txt_scale.Text = xml_doc.DisplayedParams[0];
+                string OutPathInfo = xml_doc.SearchAlgoParams();
+                tb_outpath.Text = ParseOutPathRe(OutPathInfo);
+                RuleSetMessage.OutShpPath = tb_outpath.Text;
+                //ParseOutXML(tb_outpath.Text);
+            }
+            else
+                return;
         }
 
         private void bn_SaveAs_Click(object sender, EventArgs e)

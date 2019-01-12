@@ -24,6 +24,7 @@ namespace PIESDKUser
     {
 
         #region 成员变量
+        //this.axMapControl2 = new PIE.AxControls.MapControl();
         public static MainForm parentForm = null;
         /// <summary>
         /// 地图控件对象
@@ -173,7 +174,15 @@ namespace PIESDKUser
             txtBox_GeoCoord.Text = string.Format("{0},{1}", point.X.ToString("0.0000"), point.Y.ToString("0.0000"));
             ISpatialReference spatialReference = axMapControl2.SpatialReference;
             if (spatialReference == null) return;
-            lbl_SpatialReference.Text = "坐标系：" + spatialReference.Name;
+            //IList<IMap> maps=axMapControl2.GetMaps();
+            //ILayer layer= axMapControl2.GetLayer(0);
+            int layerCount = axMapControl2.FocusMap.LayerCount;
+            if (layerCount!=0)
+            {
+                lbl_SpatialReference.Text = "坐标系：" + spatialReference.Name;
+            }
+            else
+                lbl_SpatialReference.Text = "坐标系：";
         }
 
         #endregion
@@ -473,18 +482,11 @@ namespace PIESDKUser
 
         private void toolStripButton1_Click_3(object sender, EventArgs e)
         {
-            KMeans kMeans = new KMeans();
-            kMeans.OnCreate(axMapControl2);
-            kMeans.OnClick();
+            
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            //string imagePath = @"D:\EC\data.tif";
-            //string rulePath = @"D:\EC\testvv.dcp";
-            string outpath = @"D:\EC\TESTf.shp";
-            //int result=Class1.AnalyseImage(imagePath, rulePath);
-            //MessageBox.Show(result.ToString());
             SegClassForm segClassForm = new SegClassForm();
             segClassForm.ShowDialog();
             if (RuleSetMessage.OutShpPath != null || RuleSetMessage.OutClassResultsPath != null)
@@ -492,15 +494,20 @@ namespace PIESDKUser
                 if(RuleSetMessage.OutShpPath!=null&&RuleSetMessage.AlgoOptions==0)
                 {
                     ILayer layer = LayerFactory.CreateDefaultLayer(RuleSetMessage.OutShpPath);
-                    //axMapControl2.FocusMap.AddLayer(layer);
-                    axMapControl2.AddLayer(layer,1);
-                    axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                    if (layer != null)
+                    {
+                        axMapControl2.FocusMap.AddLayer(layer);
+                        axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                    }
                 }
                 else 
                 {
                     ILayer layer = LayerFactory.CreateDefaultLayer(RuleSetMessage.OutClassResultsPath);
-                    axMapControl2.AddLayer(layer, 1);
-                    axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                    if (layer != null)
+                    {
+                        axMapControl2.FocusMap.AddLayer(layer);
+                        axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
+                    }
                 }
             }
             
@@ -539,6 +546,13 @@ namespace PIESDKUser
         private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("help_app\\index.html");
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Kmeans2 kMeans = new Kmeans2();
+            kMeans.OnCreate(axMapControl2);
+            kMeans.OnClick();
         }
     }
 }
