@@ -46,14 +46,6 @@ namespace Sparkle
                 LB_BandDisplay.Items.Add("波段" + i.ToString());
             }
             BandCount = rasterDataset.GetBandCount();
-            //IList<int> lowBand = new List<int>();
-            //for (int i = 0; i < rasterDataset.GetBandCount(); i++)
-            //{
-            //    if (LB_BandDisplay.GetSelected(i))
-            //        lowBand.Add(i);
-            //}
-            //lowBand.Add(0);lowBand.Add(1);lowBand.Add(2);
-            //iSODataParams.LowBands = lowBand;
         }
         
         private void Bn_Excecute_Click(object sender, EventArgs e)
@@ -99,15 +91,6 @@ namespace Sparkle
                 };
                 DialogResult = DialogResult.OK;
             }
-            //ISystemAlgoEvents systemAlgoEvents = iSODataClassificationAlgo as ISystemAlgoEvents;
-            //systemAlgoEvents.OnExecuteCompleted += OnAlgoExecuteCompleted;
-            ////systemAlgoEvents.OnProgressChanged += OnAlgoProgresChanged;
-            //System.Windows.Forms.Application.DoEvents();
-
-            //iSODataClassificationAlgo.Execute();
-
-            //AlgoFactory.Instance().AsynExecuteAlgo(iSODataClassificationAlgo);
-            //Close();
 
         }
 
@@ -119,10 +102,6 @@ namespace Sparkle
             if (saveFileDialog.ShowDialog() != DialogResult.OK) return;
             Tb_OutputPath.Text = saveFileDialog.FileName;
             iSODataParams.OutputFilePath = saveFileDialog.FileName;
-            //易康dll测试
-            //string imagePath = @"D:\EC\data.tif";
-            //string rulePath = @"D:\EC\testvv.dcp";
-            //int result = Class1.AnalyseImage(imagePath, rulePath);
         }
 
         private void LB_BandDisplay_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,29 +128,5 @@ namespace Sparkle
         {
 
         }
-        //private void OnAlgoExecuteCompleted(ISystemAlgo algo)
-        //{
-        //    //ISODataClassification_Exchange_Info exchange_Info = new ISODataClassification_Exchange_Info();
-        //    //IRasterDataset rasterDataset = DatasetFactory.OpenRasterDataset(exchange_Info.OutputFilePath, OpenMode.ReadOnly) as IRasterDataset;
-        //    //ILayer layer = LayerFactory.CreateDefaultRasterLayer(rasterDataset) as ILayer;
-        //    ILayer layer = LayerFactory.CreateDefaultLayer(MyIODATA_FRM.ISODataParams.OutputFilePath);
-        //    //IMap map = m_HookHelper.FocusMap;
-        //    // map.AddLayer(layer);         
-        //    Form1.axMapControl2.FocusMap.AddLayer(layer);
-        //    Form1.axMapControl2.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
-        //    ISystemAlgoEvents algoEvents = algo as ISystemAlgoEvents;
-        //    algoEvents.OnExecuteCompleted -= OnAlgoExecuteCompleted;
-        //    algoEvents.OnProgressChanged -= OnAlgoProgresChanged;
-        //}
-        //private  int  OnAlgoProgresChanged(double complete, string msg, ISystemAlgo algo)
-        //{
-
-        //    Form1.AlgoProgressBar.Value = Convert.ToInt16(complete);
-        //    Form1.AlgoStatusLabel.Text = msg;
-        //    ISystemAlgoEvents algoEvents = algo as ISystemAlgoEvents;
-        //    //algoEvents.OnExecuteCompleted += OnAlgoExecuteCompleted;
-        //    //algoEvents.OnProgressChanged -= OnAlgoProgresChanged;
-        //    return 0;
-        //}
     }
 }

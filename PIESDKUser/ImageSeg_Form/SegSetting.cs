@@ -51,8 +51,15 @@ namespace Sparkle
                     MessageBox.Show("请输入合法的参数值，Shape的范围在0-0.9之间，Compactness的范围在0-1之间");
                 }
                 string OutPathInfo = xml_doc.SearchAlgoParams();
-                string changedOutPath = ChangeOutPath(ref OutPathInfo, outpath);
-                xml_doc.ChangeoutPath(changedOutPath);
+                if (OutPathInfo != "")
+                {
+                    string changedOutPath = ChangeOutPath(ref OutPathInfo, outpath);
+                    xml_doc.ChangeoutPath(changedOutPath);
+                }
+                else
+                {
+                    MessageBox.Show("此规则集无效,或不能用于分割，\n请更改规则集并重试！");
+                }
                 RuleSetMessage.AlgoOptions = 1;
                 RuleSetMessage.OutShpPath = tb_outpath.Text;
             }

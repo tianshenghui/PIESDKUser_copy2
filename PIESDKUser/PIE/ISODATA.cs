@@ -12,9 +12,7 @@ using System.ComponentModel;
 namespace Sparkle
 {
     class MyISODATA:BaseCommand
-    {
-        //ISODataClassification_Exchange_Info iSODataClassification = new ISODataClassification_Exchange_Info();
-        //Form1 form = new Form1();           
+    {        
         public override void OnCreate(object hook)
         {
             if (hook == null) return;
@@ -25,8 +23,7 @@ namespace Sparkle
         }
         public  override void OnClick()
         {
-            //ToolStripProgressBar progressBar = Form1.AlgoProgressBar;
-            //progressBar.Increment(progressBar.Value);
+
             ISODATA_FRM myIODATA_FRM = new ISODATA_FRM();
             if (myIODATA_FRM.ShowDialog() != DialogResult.OK) return;
             ISODataClassification_Exchange_Info iSODataClassification = new ISODataClassification_Exchange_Info();
@@ -37,27 +34,16 @@ namespace Sparkle
             };
             Application.DoEvents();
             AlgoFactory.Instance().AsynExecuteAlgo(iSODataClassificationAlgo);
-            //iSODataClassificationAlgo.Execute();
+
             ISystemAlgoEvents systemAlgoEvents = iSODataClassificationAlgo as ISystemAlgoEvents;
             systemAlgoEvents.OnExecuteCompleted += OnAlgoExecuteCompleted;
             systemAlgoEvents.OnProgressChanged += OnAlgoProgresChanged;
-            //systemAlgoEvents.OnProgressChanged += OnAlgoProgresChanged;
-            //PIE.AxControls.IStatusBar statusBar = m_Application.StatusBar;
-
-            //statusBar.ShowProgress(0, 100, "");
-            //Application.DoEvents();
-            //ProgressBar progressBar = new ProgressBar();
             
         }
         private void OnAlgoExecuteCompleted(ISystemAlgo algo)
         {
-            //ISODataClassification_Exchange_Info exchange_Info = new ISODataClassification_Exchange_Info();
-            //IRasterDataset rasterDataset = DatasetFactory.OpenRasterDataset(exchange_Info.OutputFilePath, OpenMode.ReadOnly) as IRasterDataset;
-            //ILayer layer = LayerFactory.CreateDefaultRasterLayer(rasterDataset) as ILayer;
            
-           ILayer layer = LayerFactory.CreateDefaultLayer(ISODATA_FRM.ISODataParams.OutputFilePath);
-            //IMap map = m_HookHelper.FocusMap;
-            // map.AddLayer(layer);         
+           ILayer layer = LayerFactory.CreateDefaultLayer(ISODATA_FRM.ISODataParams.OutputFilePath);      
             m_HookHelper.FocusMap.AddLayer(layer);
             m_HookHelper.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
             ISystemAlgoEvents algoEvents = algo as ISystemAlgoEvents;

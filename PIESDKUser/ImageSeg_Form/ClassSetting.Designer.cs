@@ -97,6 +97,7 @@
             // 
             this.tb_outputPath.Location = new System.Drawing.Point(27, 304);
             this.tb_outputPath.Name = "tb_outputPath";
+            this.tb_outputPath.ReadOnly = true;
             this.tb_outputPath.Size = new System.Drawing.Size(315, 25);
             this.tb_outputPath.TabIndex = 3;
             // 

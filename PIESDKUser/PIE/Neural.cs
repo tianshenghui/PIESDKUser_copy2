@@ -1,5 +1,5 @@
 ﻿using System;
-using  PIE.Plugin ;
+using PIE.Plugin;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,7 @@ using PIE.Carto;
 using System.Runtime.InteropServices;
 namespace Sparkle
 {
-    public class Neural:BaseCommand 
+    public class Neural : BaseCommand
     {
         public override void OnCreate(object hook)
         {
@@ -26,8 +26,8 @@ namespace Sparkle
             Neural_FRM neural_From = new Neural_FRM();
             if (neural_From.ShowDialog() != DialogResult.OK) return;
             NeuralNetworkCluster_Exchange_Info neuralNet = new NeuralNetworkCluster_Exchange_Info();
-           neuralNet = Neural_FRM.NeuralEx; //访问静态成员
-            
+            neuralNet = Neural_FRM.NeuralEx; //访问静态成员
+
 
             NeuralNetworkClusterAlgo neuralN_Algo = new NeuralNetworkClusterAlgo { Params = neuralNet };
 
@@ -35,14 +35,14 @@ namespace Sparkle
             ISystemAlgoEvents systemAlgoEvents = neuralN_Algo as ISystemAlgoEvents;
             systemAlgoEvents.OnExecuteCompleted += OnAlgoExecuteCompleted; ///??
             systemAlgoEvents.OnProgressChanged += OnAlgoProgresChanged;
-          
 
-           
-            
+
+
+
         }
         private void OnAlgoExecuteCompleted(ISystemAlgo Algo)
         {
-            ILayer layer = LayerFactory.CreateDefaultLayer(Neural_FRM.NeuralEx.OutputFilePath);                
+            ILayer layer = LayerFactory.CreateDefaultLayer(Neural_FRM.NeuralEx.OutputFilePath);
             m_HookHelper.FocusMap.AddLayer(layer);
             m_HookHelper.ActiveView.PartialRefresh(ViewDrawPhaseType.ViewAll);
             ISystemAlgoEvents algoEvents = Algo as ISystemAlgoEvents;
@@ -53,9 +53,10 @@ namespace Sparkle
         }
         private int OnAlgoProgresChanged(double complete, string msg, ISystemAlgo algo)
         {
-            MethodInvoker invoker = () => {
+            MethodInvoker invoker = () =>
+            {
                 MainForm.parentForm.myProgressBar.Value = Convert.ToInt16(complete);
-                MainForm.parentForm.myLabel.Text = Convert.ToByte(complete).ToString()+"%";
+                MainForm.parentForm.myLabel.Text = Convert.ToByte(complete).ToString() + "%";
             };
 
             if (MainForm.parentForm.myProgressBar.InvokeRequired)

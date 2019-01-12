@@ -108,7 +108,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(842, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // MulSegToolStripMenuItem
             // 
@@ -148,9 +147,10 @@
             // 
             this.tb_image.Location = new System.Drawing.Point(194, 387);
             this.tb_image.Name = "tb_image";
+            this.tb_image.ReadOnly = true;
             this.tb_image.Size = new System.Drawing.Size(484, 25);
             this.tb_image.TabIndex = 0;
-            this.tb_image.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.tb_image.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lb_image
             // 
@@ -169,12 +169,12 @@
             this.lb_ruleset.Size = new System.Drawing.Size(97, 15);
             this.lb_ruleset.TabIndex = 6;
             this.lb_ruleset.Text = "规则集路径：";
-            this.lb_ruleset.Click += new System.EventHandler(this.lb_ruleset_Click);
             // 
             // tb_ruleset
             // 
             this.tb_ruleset.Location = new System.Drawing.Point(194, 428);
             this.tb_ruleset.Name = "tb_ruleset";
+            this.tb_ruleset.ReadOnly = true;
             this.tb_ruleset.Size = new System.Drawing.Size(484, 25);
             this.tb_ruleset.TabIndex = 7;
             // 
@@ -315,9 +315,9 @@
             // 
             this.Tb_Download_Path.Location = new System.Drawing.Point(190, 158);
             this.Tb_Download_Path.Name = "Tb_Download_Path";
+            this.Tb_Download_Path.ReadOnly = true;
             this.Tb_Download_Path.Size = new System.Drawing.Size(484, 25);
             this.Tb_Download_Path.TabIndex = 9;
-            this.Tb_Download_Path.TextChanged += new System.EventHandler(this.Tb_Download_Path_TextChanged);
             // 
             // Tb_FTPusername
             // 
@@ -325,7 +325,6 @@
             this.Tb_FTPusername.Name = "Tb_FTPusername";
             this.Tb_FTPusername.Size = new System.Drawing.Size(484, 25);
             this.Tb_FTPusername.TabIndex = 3;
-            this.Tb_FTPusername.TextChanged += new System.EventHandler(this.Tb_FTPusername_TextChanged);
             // 
             // Tb_FTPpassword
             // 
@@ -387,6 +386,7 @@
             // 
             this.tb_filedownPath2.Location = new System.Drawing.Point(190, 194);
             this.tb_filedownPath2.Name = "tb_filedownPath2";
+            this.tb_filedownPath2.ReadOnly = true;
             this.tb_filedownPath2.Size = new System.Drawing.Size(484, 25);
             this.tb_filedownPath2.TabIndex = 9;
             // 
@@ -485,6 +485,7 @@
             // 
             this.tb_projectPath.Location = new System.Drawing.Point(194, 469);
             this.tb_projectPath.Name = "tb_projectPath";
+            this.tb_projectPath.ReadOnly = true;
             this.tb_projectPath.Size = new System.Drawing.Size(484, 25);
             this.tb_projectPath.TabIndex = 16;
             // 
@@ -542,7 +543,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SegClassForm";
             this.Text = "面向对象分类";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

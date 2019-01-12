@@ -105,10 +105,6 @@ namespace Sparkle
             AttributeToolStripMenuItem.Tag = new FeatureLayerAttributeCommand();
             LayerAttributeMenuItem.Tag = new LayerPropertyCommand();
             ZoomInToolStripMenuItem.Tag = new MapZoomInTool();
-
-            //ISODATA.Tag = new MyISODATA();
-            //ISODATA.Tag = new PIE.Plugin.ISODataClassificationCommand();   
-            //PCAfusion.Tag = new ISODataClassificationAlgo();
             parentForm = this;
         }
         #endregion
@@ -434,8 +430,6 @@ namespace Sparkle
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            //MyIODATA_FRM myIODATA_FRM = new MyIODATA_FRM();
-            //myIODATA_FRM.Show();
             MyISODATA myISODATA = new MyISODATA();
             myISODATA.OnCreate(axMapControl2);
             myISODATA.OnClick();
