@@ -541,7 +541,11 @@ namespace Sparkle
 
         private void 帮助ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("help_app\\index.html");
+            //string currentPath = System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName;
+            //string currentDirectory = System.IO.Directory.GetCurrentDirectory();
+            string currentDirectory = System.AppDomain.CurrentDomain.BaseDirectory;
+            string htmlPath = currentDirectory + "help_app\\index.html";
+            System.Diagnostics.Process.Start(htmlPath);
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)

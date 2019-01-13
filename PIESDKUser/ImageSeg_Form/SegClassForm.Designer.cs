@@ -81,6 +81,7 @@
             this.lb_projectName = new System.Windows.Forms.Label();
             this.tb_projetName = new System.Windows.Forms.TextBox();
             this.folderBrowserDialog2 = new System.Windows.Forms.FolderBrowserDialog();
+            this.bn_CancelTask = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             // bn_Execute
             // 
-            this.bn_Execute.Location = new System.Drawing.Point(296, 563);
+            this.bn_Execute.Location = new System.Drawing.Point(194, 562);
             this.bn_Execute.Name = "bn_Execute";
             this.bn_Execute.Size = new System.Drawing.Size(104, 37);
             this.bn_Execute.TabIndex = 1;
@@ -150,7 +151,6 @@
             this.tb_image.ReadOnly = true;
             this.tb_image.Size = new System.Drawing.Size(484, 25);
             this.tb_image.TabIndex = 0;
-            //this.tb_image.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lb_image
             // 
@@ -515,11 +515,22 @@
             this.tb_projetName.Size = new System.Drawing.Size(484, 25);
             this.tb_projetName.TabIndex = 21;
             // 
+            // bn_CancelTask
+            // 
+            this.bn_CancelTask.Location = new System.Drawing.Point(305, 562);
+            this.bn_CancelTask.Name = "bn_CancelTask";
+            this.bn_CancelTask.Size = new System.Drawing.Size(94, 37);
+            this.bn_CancelTask.TabIndex = 22;
+            this.bn_CancelTask.Text = "取消执行";
+            this.bn_CancelTask.UseVisualStyleBackColor = true;
+            this.bn_CancelTask.Click += new System.EventHandler(this.bn_CancelTask_Click);
+            // 
             // SegClassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 645);
+            this.Controls.Add(this.bn_CancelTask);
             this.Controls.Add(this.tb_projetName);
             this.Controls.Add(this.lb_projectName);
             this.Controls.Add(this.bn_SaveProj);
@@ -609,6 +620,7 @@
         private System.Windows.Forms.Label lb_projectName;
         private System.Windows.Forms.TextBox tb_projetName;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog2;
+        private System.Windows.Forms.Button bn_CancelTask;
     }
 }
 

@@ -26,6 +26,8 @@ namespace Sparkle
             InitializeComponent();
         }
         private bool NotcancelFlag = true;
+        private static CancellationTokenSource tokenSource2 = new CancellationTokenSource();
+        private CancellationToken ct = tokenSource2.Token;
         private void MulSegToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SegSetting segSetting = new SegSetting();
@@ -36,6 +38,19 @@ namespace Sparkle
             return Task.Run(() =>
                   Class1.AnalyseImage(imagePath, rulesetPath, project, projectName));
 
+        }
+        //用于任务取消
+        Task<int> AnalyseImageAsync2(string imagePath, string rulesetPath, string project, string projectName)
+        {
+            var task= Task<int>.Factory.StartNew(() => {
+                if (ct.IsCancellationRequested)
+                {
+                    ct.ThrowIfCancellationRequested();
+                }
+                int result=Class1.AnalyseImage(imagePath, rulesetPath, project, projectName);
+                return result;
+            },tokenSource2.Token);
+            return task;
         }
         Task<bool> FTPdownloadAsync(string FTPURL, string filePath, string FTPusername, string FTPpassword, ProgressBar pb)
         {
@@ -124,7 +139,7 @@ namespace Sparkle
             string projectName = tb_projetName.Text;
             Lb_result.Text = "开始执行";
             Task t2 = ProgressbarStatus();
-            Task<int> t1 = AnalyseImageAsync(imagepath, rulepath, project, projectName);
+            Task<int> t1 = AnalyseImageAsync2(imagepath, rulepath, project, projectName);
             await Task.WhenAny(t1, t2);
             if (t1.Result == 0)
             {
@@ -209,6 +224,11 @@ namespace Sparkle
             {
                 tb_projectPath.Text = folderBrowserDialog2.SelectedPath;
             }
+        }
+
+        private void bn_CancelTask_Click(object sender, EventArgs e)
+        {
+            tokenSource2?.Cancel();
         }
     }
 }
